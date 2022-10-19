@@ -6,13 +6,13 @@ export class UserDetails extends Component {
     <div>
       <h2>Details</h2>
 
-      <label for='firstNameInput'>First Name</label>
+      <label htmlFor='firstNameInput'>{this.props.details.firstName}</label>
       <input id='firstNameInput' name='firstNameInput' type='text'></input>
 
-      <label for='secondNameInput'>First Name</label>
+      <label htmlFor='secondNameInput'>First Name</label>
       <input id='secondNameInput' name='secondNameInput' type='text'></input>
 
-      <label for='infoInput'>Info</label>
+      <label htmlFor='infoInput'>Info</label>
       <input id='infoInput' name='infoInput' type='textarea'></input>
     </div>
     )
