@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import UserDetails from './UserDetails';
+import ContactDetails from './ContactDetails';
 
 class Form extends Component {
 
@@ -8,6 +9,11 @@ class Form extends Component {
     lastName: '',
     jobTitle: '',
     intro: '',
+
+    location: '',
+    phone: '',
+    email: '',
+    website: '',
   }
 
   // Next page 
@@ -19,6 +25,10 @@ class Form extends Component {
     return (
       <form>
         <UserDetails 
+          details={details}
+        />
+
+        <ContactDetails 
           details={details}
         />
       </form>
