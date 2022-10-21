@@ -16,20 +16,25 @@ class Form extends Component {
     website: '',
   }
 
-  // Next page 
+  // Updates the details in state
+  updateDetails = input => e => {
+    this.setState({[input]: e.target.value})
+  }
 
   render() {
-    const { firstName, lastName, jobTitle, intro } = this.state;
-    const details = { firstName, lastName, jobTitle, intro };
+    // const { firstName, lastName, jobTitle, intro } = this.state;
+    const details = { ...this.state };
 
     return (
       <form>
         <UserDetails 
           details={details}
+          updateDetails={this.updateDetails}
         />
 
         <ContactDetails 
           details={details}
+          updateDetails={this.updateDetails}
         />
       </form>
     )
