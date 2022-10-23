@@ -3,8 +3,9 @@ import React, { Component } from 'react';
 export class UserDetails extends Component {
   render() {
     const { details, updateDetails } = this.props;
+
     return (
-      <form>
+      <form className="form">
         <h2>Details</h2>
 
         <label htmlFor="firstNameInput">First Name</label>
@@ -42,6 +43,8 @@ export class UserDetails extends Component {
           onChange={updateDetails('intro')}
           defaultValue={details.intro}
         />
+
+        <button onClick={this.props.nextPage}>Next</button>
       </form>
     );
   }
