@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import UserDetails from './UserDetails';
 import ContactDetails from './ContactDetails';
+import Education from './Education';
 
 class Form extends Component {
   state = {
@@ -15,6 +16,11 @@ class Form extends Component {
     phone: '',
     email: '',
     website: '',
+
+    qualification: '',
+    issuer: '',
+    fromDate: '',
+    toDate: '',
   };
 
   // Updates the details in state
@@ -46,6 +52,15 @@ class Form extends Component {
       case 2:
         return (
           <ContactDetails
+            details={details}
+            updateDetails={this.updateDetails}
+            nextPage={this.nextPage}
+            prevPage={this.prevPage}
+          />
+        );
+      case 3:
+        return (
+          <Education
             details={details}
             updateDetails={this.updateDetails}
             nextPage={this.nextPage}
