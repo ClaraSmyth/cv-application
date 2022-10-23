@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 
-export class Education extends Component {
+export class Experience extends Component {
   render() {
     const { details, updateDetails } = this.props;
 
     return (
       <form className="form">
-        <h2>Education</h2>
+        <h2>Experience</h2>
 
-        <label htmlFor="qualificationInput">Qualification</label>
+        <label htmlFor="qualificationInput">Job Title</label>
         <input
           id="qualificationInput"
           name="qualificationInput"
@@ -50,4 +50,4 @@ export class Education extends Component {
   }
 }
 
-export default Education;
+export default Experience;
