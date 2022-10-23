@@ -1,22 +1,50 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
 export class UserDetails extends Component {
   render() {
+    const { details, updateDetails } = this.props;
     return (
-    <div>
-      <h2>Details</h2>
+      <form>
+        <h2>Details</h2>
 
-      <label htmlFor='firstNameInput'>{this.props.details.firstName}</label>
-      <input id='firstNameInput' name='firstNameInput' type='text'></input>
+        <label htmlFor="firstNameInput">First Name</label>
+        <input
+          id="firstNameInput"
+          name="firstNameInput"
+          type="text"
+          onChange={updateDetails('firstName')}
+          defaultValue={details.firstName}
+        />
 
-      <label htmlFor='secondNameInput'>First Name</label>
-      <input id='secondNameInput' name='secondNameInput' type='text'></input>
+        <label htmlFor="lastNameInput">Last Name</label>
+        <input
+          id="lastNameInput"
+          name="lastNameInput"
+          type="text"
+          onChange={updateDetails('lastName')}
+          defaultValue={details.lastName}
+        />
 
-      <label htmlFor='infoInput'>Info</label>
-      <input id='infoInput' name='infoInput' type='textarea'></input>
-    </div>
-    )
+        <label htmlFor="infoInput">Title</label>
+        <input
+          id="titleInput"
+          name="titleInput"
+          type="text"
+          onChange={updateDetails('title')}
+          defaultValue={details.title}
+        />
+
+        <label htmlFor="infoInput">Intro</label>
+        <input
+          id="infoInput"
+          name="infoInput"
+          type="text"
+          onChange={updateDetails('intro')}
+          defaultValue={details.intro}
+        />
+      </form>
+    );
   }
 }
 
-export default UserDetails
+export default UserDetails;
