@@ -1,11 +1,12 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import UserDetails from './UserDetails';
 import ContactDetails from './ContactDetails';
 
 class Form extends Component {
-
   state = {
-    firstName: 'Test',
+    page: 1,
+
+    firstName: '',
     lastName: '',
     jobTitle: '',
     intro: '',
@@ -14,31 +15,45 @@ class Form extends Component {
     phone: '',
     email: '',
     website: '',
-  }
+  };
 
   // Updates the details in state
-  updateDetails = input => e => {
-    this.setState({[input]: e.target.value})
-  }
+  updateDetails = (input) => (e) => {
+    this.setState({ [input]: e.target.value });
+  };
+
+  // Updates form to next page
+  nextPage = (e) => {
+    e.preventDefault();
+    const { page } = this.state;
+    this.setState({ page: page + 1 });
+  };
+
+  // Updates form to previous page
+  prevPage = (e) => {
+    e.preventDefault();
+    const { page } = this.state;
+    this.setState({ page: page - 1 });
+  };
 
   render() {
-    // const { firstName, lastName, jobTitle, intro } = this.state;
     const details = { ...this.state };
+    const { page } = this.state;
 
-    return (
-      <form>
-        <UserDetails 
-          details={details}
-          updateDetails={this.updateDetails}
-        />
-
-        <ContactDetails 
-          details={details}
-          updateDetails={this.updateDetails}
-        />
-      </form>
-    )
+    switch (page) {
+      default:
+        return <UserDetails details={details} updateDetails={this.updateDetails} nextPage={this.nextPage} />;
+      case 2:
+        return (
+          <ContactDetails
+            details={details}
+            updateDetails={this.updateDetails}
+            nextPage={this.nextPage}
+            prevPage={this.prevPage}
+          />
+        );
+    }
   }
 }
 
-export default Form
+export default Form;
