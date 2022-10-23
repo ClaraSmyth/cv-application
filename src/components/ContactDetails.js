@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export class contactDetails extends Component {
+export class ContactDetails extends Component {
   render() {
     const { details, updateDetails } = this.props;
 
@@ -50,4 +50,4 @@ export class contactDetails extends Component {
   }
 }
 
-export default contactDetails;
+export default ContactDetails;
