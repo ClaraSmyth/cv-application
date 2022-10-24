@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import UserDetails from './UserDetails';
 import ContactDetails from './ContactDetails';
 import Education from './Education';
+import Experience from './Experience';
 
 class Form extends Component {
   state = {
@@ -61,6 +62,15 @@ class Form extends Component {
       case 3:
         return (
           <Education
+            details={details}
+            updateDetails={this.updateDetails}
+            nextPage={this.nextPage}
+            prevPage={this.prevPage}
+          />
+        );
+      case 4:
+        return (
+          <Experience
             details={details}
             updateDetails={this.updateDetails}
             nextPage={this.nextPage}
