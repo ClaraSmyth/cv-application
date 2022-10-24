@@ -8,22 +8,22 @@ export class Experience extends Component {
       <form className="form">
         <h2>Experience</h2>
 
-        <label htmlFor="qualificationInput">Job Title</label>
+        <label htmlFor="titleInput">Job Title</label>
         <input
-          id="qualificationInput"
-          name="qualificationInput"
+          id="titleInput"
+          name="titleInput"
           type="text"
-          onChange={updateDetails('qualification')}
-          defaultValue={details.qualification}
+          onChange={updateDetails('title')}
+          defaultValue={details.title}
         />
 
-        <label htmlFor="issuerInput">Issued by</label>
+        <label htmlFor="companyInput">Company</label>
         <input
-          id="issuerInput"
-          name="issuerInput"
+          id="companyInput"
+          name="companyInput"
           type="text"
-          onChange={updateDetails('issuer')}
-          defaultValue={details.issuer}
+          onChange={updateDetails('company')}
+          defaultValue={details.company}
         />
 
         <label htmlFor="fromDateInput">From</label>
@@ -43,8 +43,17 @@ export class Experience extends Component {
           onChange={updateDetails('toDate')}
           defaultValue={details.toDate}
         />
+
+        <label htmlFor="descInput">Description</label>
+        <input
+          id="descInput"
+          name="descInput"
+          type="text"
+          onChange={updateDetails('desc')}
+          defaultValue={details.desc}
+        />
+
         <button onClick={this.props.prevPage}>Prev</button>
-        <button onClick={this.props.nextPage}>Next</button>
       </form>
     );
   }
