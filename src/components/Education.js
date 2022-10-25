@@ -43,8 +43,10 @@ export class Education extends Component {
           onChange={updateDetails('toDate')}
           defaultValue={details.toDate}
         />
-        <button onClick={this.props.prevPage}>Prev</button>
-        <button onClick={this.props.nextPage}>Next</button>
+        <div>
+          <button onClick={this.props.prevPage}>Prev</button>
+          <button onClick={this.props.nextPage}>Next</button>
+        </div>
       </form>
     );
   }

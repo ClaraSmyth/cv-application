@@ -53,7 +53,9 @@ export class Experience extends Component {
           defaultValue={details.desc}
         />
 
-        <button onClick={this.props.prevPage}>Prev</button>
+        <div>
+          <button onClick={this.props.prevPage}>Prev</button>
+        </div>
       </form>
     );
   }

@@ -44,7 +44,9 @@ export class UserDetails extends Component {
           defaultValue={details.intro}
         />
 
-        <button onClick={this.props.nextPage}>Next</button>
+        <div>
+          <button onClick={this.props.nextPage}>Next</button>
+        </div>
       </form>
     );
   }

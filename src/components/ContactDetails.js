@@ -43,8 +43,10 @@ export class ContactDetails extends Component {
           onChange={updateDetails('phone')}
           defaultValue={details.phone}
         />
-        <button onClick={this.props.prevPage}>Prev</button>
-        <button onClick={this.props.nextPage}>Next</button>
+        <div>
+          <button onClick={this.props.prevPage}>Prev</button>
+          <button onClick={this.props.nextPage}>Next</button>
+        </div>
       </form>
     );
   }
