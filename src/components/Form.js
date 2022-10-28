@@ -8,25 +8,39 @@ class Form extends Component {
   state = {
     page: 1,
 
-    firstName: '',
-    lastName: '',
-    jobTitle: '',
-    intro: '',
+    userDetails: {
+      firstName: '',
+      lastName: '',
+      jobTitle: '',
+      intro: '',
+    },
 
-    location: '',
-    phone: '',
-    email: '',
-    website: '',
+    contactDetails: {
+      location: '',
+      phone: '',
+      email: '',
+      website: '',
+    },
 
-    qualification: '',
-    issuer: '',
-    fromDate: '',
-    toDate: '',
+    education: {
+      qualification: '',
+      issuer: '',
+      fromDate: '',
+      toDate: '',
+    },
+
+    experience: {
+      jobTitle: '',
+      company: '',
+      fromDate: '',
+      toDate: '',
+      desc: '',
+    },
   };
 
   // Updates the details in state
-  updateDetails = (input) => (e) => {
-    this.setState({ [input]: e.target.value });
+  updateDetails = (page, input) => (e) => {
+    this.setState((prevState) => ({ [page]: { ...prevState[page], [input]: e.target.value } }));
   };
 
   // Updates form to next page
@@ -69,14 +83,7 @@ class Form extends Component {
           />
         );
       case 4:
-        return (
-          <Experience
-            details={details}
-            updateDetails={this.updateDetails}
-            nextPage={this.nextPage}
-            prevPage={this.prevPage}
-          />
-        );
+        return <Experience details={details} updateDetails={this.updateDetails} prevPage={this.prevPage} />;
     }
   }
 }
