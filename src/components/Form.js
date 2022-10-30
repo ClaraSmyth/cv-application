@@ -63,11 +63,13 @@ class Form extends Component {
 
     switch (page) {
       default:
-        return <UserDetails details={details} updateDetails={this.updateDetails} nextPage={this.nextPage} />;
+        return (
+          <UserDetails details={details.userDetails} updateDetails={this.updateDetails} nextPage={this.nextPage} />
+        );
       case 2:
         return (
           <ContactDetails
-            details={details}
+            details={details.contactDetails}
             updateDetails={this.updateDetails}
             nextPage={this.nextPage}
             prevPage={this.prevPage}
@@ -76,14 +78,14 @@ class Form extends Component {
       case 3:
         return (
           <Education
-            details={details}
+            details={details.education}
             updateDetails={this.updateDetails}
             nextPage={this.nextPage}
             prevPage={this.prevPage}
           />
         );
       case 4:
-        return <Experience details={details} updateDetails={this.updateDetails} prevPage={this.prevPage} />;
+        return <Experience details={details.experience} updateDetails={this.updateDetails} prevPage={this.prevPage} />;
     }
   }
 }
