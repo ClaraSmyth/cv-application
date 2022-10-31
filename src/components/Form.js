@@ -23,10 +23,20 @@ class Form extends Component {
     },
 
     education: {
-      qualification: '',
-      issuer: '',
-      fromDate: '',
-      toDate: '',
+      qualification1: '',
+      issuer1: '',
+      fromDate1: '',
+      toDate1: '',
+
+      qualification2: '',
+      issuer2: '',
+      fromDate2: '',
+      toDate2: '',
+
+      qualification3: '',
+      issuer3: '',
+      fromDate3: '',
+      toDate3: '',
     },
 
     experience: {
