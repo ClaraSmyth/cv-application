@@ -40,11 +40,23 @@ class Form extends Component {
     },
 
     experience: {
-      jobTitle: '',
-      company: '',
-      fromDate: '',
-      toDate: '',
-      desc: '',
+      jobTitle1: '',
+      company1: '',
+      fromDate1: '',
+      toDate1: '',
+      desc1: '',
+
+      jobTitle2: '',
+      company2: '',
+      fromDate2: '',
+      toDate2: '',
+      desc2: '',
+
+      jobTitle3: '',
+      company3: '',
+      fromDate3: '',
+      toDate3: '',
+      desc3: '',
     },
   };
 
