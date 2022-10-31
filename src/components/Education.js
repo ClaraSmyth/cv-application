@@ -1,20 +1,37 @@
 import React, { Component } from 'react';
 
 export class Education extends Component {
+  state = {
+    page: 1,
+  };
+
+  updatePage = (num) => (e) => {
+    e.preventDefault();
+    this.setState({ page: num });
+  };
+
   render() {
     const { details, updateDetails } = this.props;
+    const { page } = this.state;
 
     return (
       <form className="form">
         <h2>Education</h2>
+
+        <div>
+          <button onClick={this.updatePage(1)}>1</button>
+          <button onClick={this.updatePage(2)}>2</button>
+          <button onClick={this.updatePage(3)}>3</button>
+        </div>
 
         <label htmlFor="qualificationInput">Qualification</label>
         <input
           id="qualificationInput"
           name="qualificationInput"
           type="text"
-          onChange={updateDetails('qualification')}
-          defaultValue={details.qualification}
+          onChange={updateDetails('education', `qualification${page}`)}
+          defaultValue={details[`qualification${page}`]}
+          key={`qualificationPage:qualification${page}`}
         />
 
         <label htmlFor="issuerInput">Issued by</label>
@@ -22,8 +39,9 @@ export class Education extends Component {
           id="issuerInput"
           name="issuerInput"
           type="text"
-          onChange={updateDetails('issuer')}
-          defaultValue={details.issuer}
+          onChange={updateDetails('education', `issuer${page}`)}
+          defaultValue={details[`issuer${page}`]}
+          key={`issuerPage:issuer${page}`}
         />
 
         <label htmlFor="fromDateInput">From</label>
@@ -31,8 +49,9 @@ export class Education extends Component {
           id="fromDateInput"
           name="fromDateInput"
           type="text"
-          onChange={updateDetails('fromDate')}
-          defaultValue={details.fromDate}
+          onChange={updateDetails('education', `fromDate${page}`)}
+          defaultValue={details[`fromDate${page}`]}
+          key={`fromDatePage:fromDate${page}`}
         />
 
         <label htmlFor="toDateInput">To</label>
@@ -40,8 +59,9 @@ export class Education extends Component {
           id="toDateInput"
           name="toDateInput"
           type="text"
-          onChange={updateDetails('toDate')}
-          defaultValue={details.toDate}
+          onChange={updateDetails('education', `toDate${page}`)}
+          defaultValue={details[`toDate${page}`]}
+          key={`toDatePage:toDate${page}`}
         />
         <div>
           <button onClick={this.props.prevPage}>Prev</button>
