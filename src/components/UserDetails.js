@@ -13,7 +13,7 @@ export class UserDetails extends Component {
           id="firstNameInput"
           name="firstNameInput"
           type="text"
-          onChange={updateDetails('firstName')}
+          onChange={updateDetails('userDetails', 'firstName')}
           defaultValue={details.firstName}
         />
 
@@ -22,17 +22,17 @@ export class UserDetails extends Component {
           id="lastNameInput"
           name="lastNameInput"
           type="text"
-          onChange={updateDetails('lastName')}
+          onChange={updateDetails('userDetails', 'lastName')}
           defaultValue={details.lastName}
         />
 
-        <label htmlFor="infoInput">Title</label>
+        <label htmlFor="infoInput">Job Title</label>
         <input
           id="titleInput"
           name="titleInput"
           type="text"
-          onChange={updateDetails('title')}
-          defaultValue={details.title}
+          onChange={updateDetails('userDetails', 'jobTitle')}
+          defaultValue={details.jobTitle}
         />
 
         <label htmlFor="infoInput">Intro</label>
@@ -40,7 +40,7 @@ export class UserDetails extends Component {
           id="infoInput"
           name="infoInput"
           type="text"
-          onChange={updateDetails('intro')}
+          onChange={updateDetails('userDetails', 'intro')}
           defaultValue={details.intro}
         />
 
