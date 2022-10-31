@@ -13,7 +13,7 @@ export class ContactDetails extends Component {
           id="websiteInput"
           name="websiteInput"
           type="text"
-          onChange={updateDetails('website')}
+          onChange={updateDetails('contactDetails', 'website')}
           defaultValue={details.website}
         />
 
@@ -22,7 +22,7 @@ export class ContactDetails extends Component {
           id="emailInput"
           name="emailInput"
           type="text"
-          onChange={updateDetails('email')}
+          onChange={updateDetails('contactDetails', 'email')}
           defaultValue={details.email}
         />
 
@@ -31,7 +31,7 @@ export class ContactDetails extends Component {
           id="locationInput"
           name="locationInput"
           type="text"
-          onChange={updateDetails('location')}
+          onChange={updateDetails('contactDetails', 'location')}
           defaultValue={details.location}
         />
 
@@ -40,7 +40,7 @@ export class ContactDetails extends Component {
           id="phoneInput"
           name="phoneInput"
           type="text"
-          onChange={updateDetails('phone')}
+          onChange={updateDetails('contactDetails', 'phone')}
           defaultValue={details.phone}
         />
         <div>
