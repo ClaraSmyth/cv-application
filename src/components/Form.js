@@ -3,6 +3,7 @@ import UserDetails from './UserDetails';
 import ContactDetails from './ContactDetails';
 import Education from './Education';
 import Experience from './Experience';
+import Skills from './Skills';
 
 class Form extends Component {
   state = {
@@ -58,6 +59,17 @@ class Form extends Component {
       toDate3: '',
       desc3: '',
     },
+
+    skills: {
+      skill1: '',
+      skill2: '',
+      skill3: '',
+      skill4: '',
+      skill5: '',
+      skill6: '',
+      skill7: '',
+      skill8: '',
+    },
   };
 
   // Updates the details in state
@@ -107,7 +119,23 @@ class Form extends Component {
           />
         );
       case 4:
-        return <Experience details={details.experience} updateDetails={this.updateDetails} prevPage={this.prevPage} />;
+        return (
+          <Experience
+            details={details.experience}
+            updateDetails={this.updateDetails}
+            nextPage={this.nextPage}
+            prevPage={this.prevPage}
+          />
+        );
+      case 5:
+        return (
+          <Skills
+            details={details.skills}
+            updateDetails={this.updateDetails}
+            nextPage={this.nextPage}
+            prevPage={this.prevPage}
+          />
+        );
     }
   }
 }
