@@ -4,6 +4,7 @@ import ContactDetails from './ContactDetails';
 import Education from './Education';
 import Experience from './Experience';
 import Skills from './Skills';
+import References from './References';
 
 class Form extends Component {
   state = {
@@ -70,6 +71,15 @@ class Form extends Component {
       skill7: '',
       skill8: '',
     },
+
+    references: {
+      refName1: '',
+      refPhone1: '',
+      refEmail1: '',
+      refName2: '',
+      refPhone2: '',
+      refEmail2: '',
+    },
   };
 
   // Updates the details in state
@@ -131,6 +141,15 @@ class Form extends Component {
         return (
           <Skills
             details={details.skills}
+            updateDetails={this.updateDetails}
+            nextPage={this.nextPage}
+            prevPage={this.prevPage}
+          />
+        );
+      case 6:
+        return (
+          <References
+            details={details.references}
             updateDetails={this.updateDetails}
             nextPage={this.nextPage}
             prevPage={this.prevPage}
