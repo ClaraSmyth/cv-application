@@ -31,7 +31,7 @@ export class Education extends Component {
           type="text"
           onChange={updateDetails('education', `qualification${page}`)}
           defaultValue={details[`qualification${page}`]}
-          key={`qualificationPage:qualification${page}`}
+          key={`qualificationInput:qualification${page}`}
         />
 
         <label htmlFor="issuerInput">Issued by</label>
@@ -41,7 +41,7 @@ export class Education extends Component {
           type="text"
           onChange={updateDetails('education', `issuer${page}`)}
           defaultValue={details[`issuer${page}`]}
-          key={`issuerPage:issuer${page}`}
+          key={`issuerInput:issuer${page}`}
         />
 
         <label htmlFor="fromDateInput">From</label>
@@ -51,7 +51,7 @@ export class Education extends Component {
           type="text"
           onChange={updateDetails('education', `fromDate${page}`)}
           defaultValue={details[`fromDate${page}`]}
-          key={`fromDatePage:fromDate${page}`}
+          key={`fromDateInput:fromDate${page}`}
         />
 
         <label htmlFor="toDateInput">To</label>
@@ -61,7 +61,7 @@ export class Education extends Component {
           type="text"
           onChange={updateDetails('education', `toDate${page}`)}
           defaultValue={details[`toDate${page}`]}
-          key={`toDatePage:toDate${page}`}
+          key={`toDateInput:toDate${page}`}
         />
         <div>
           <button onClick={this.props.prevPage}>Prev</button>

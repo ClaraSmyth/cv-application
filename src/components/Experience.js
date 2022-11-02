@@ -31,7 +31,7 @@ export class Experience extends Component {
           type="text"
           onChange={updateDetails('experience', `jobTitle${page}`)}
           defaultValue={details[`jobTitle${page}`]}
-          key={`jobTitlePage:jobTitle${page}`}
+          key={`jobTitleInput:jobTitle${page}`}
         />
 
         <label htmlFor="companyInput">Company</label>
@@ -41,7 +41,7 @@ export class Experience extends Component {
           type="text"
           onChange={updateDetails('experience', `company${page}`)}
           defaultValue={details[`company${page}`]}
-          key={`companyPage:company${page}`}
+          key={`companyInput:company${page}`}
         />
 
         <label htmlFor="fromDateInput">From</label>
@@ -51,7 +51,7 @@ export class Experience extends Component {
           type="text"
           onChange={updateDetails('experience', `fromDate${page}`)}
           defaultValue={details[`fromDate${page}`]}
-          key={`fromDatePage:fromDate${page}`}
+          key={`fromDateInput:fromDate${page}`}
         />
 
         <label htmlFor="toDateInput">To</label>
@@ -61,7 +61,7 @@ export class Experience extends Component {
           type="text"
           onChange={updateDetails('experience', `toDate${page}`)}
           defaultValue={details[`toDate${page}`]}
-          key={`toDatePage:toDate${page}`}
+          key={`toDateInput:toDate${page}`}
         />
 
         <label htmlFor="descInput">Description</label>
@@ -71,7 +71,7 @@ export class Experience extends Component {
           type="text"
           onChange={updateDetails('experience', `desc${page}`)}
           defaultValue={details[`desc${page}`]}
-          key={`descPage:desc${page}`}
+          key={`descInput:desc${page}`}
         />
 
         <div>
