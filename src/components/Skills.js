@@ -74,6 +74,7 @@ export class Skills extends Component {
 
         <div>
           <button onClick={this.props.prevPage}>Prev</button>
+          <button onClick={this.props.nextPage}>Next</button>
         </div>
       </form>
     );
