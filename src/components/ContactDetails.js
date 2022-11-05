@@ -6,7 +6,7 @@ export class ContactDetails extends Component {
 
     return (
       <form className="form">
-        <h2>Contact Details</h2>
+        <h2 className="form-title">Contact Details</h2>
 
         <label htmlFor="websiteInput">Website</label>
         <input
@@ -43,7 +43,7 @@ export class ContactDetails extends Component {
           onChange={updateDetails('contactDetails', 'phone')}
           defaultValue={details.phone}
         />
-        <div>
+        <div className="form-nav">
           <button onClick={this.props.prevPage}>Prev</button>
           <button onClick={this.props.nextPage}>Next</button>
         </div>

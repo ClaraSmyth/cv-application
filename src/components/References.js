@@ -16,9 +16,9 @@ export class References extends Component {
 
     return (
       <form className="form">
-        <h2>References</h2>
+        <h2 className="form-title">References</h2>
 
-        <div>
+        <div className="form-pages">
           <button onClick={this.updatePage(1)}>1</button>
           <button onClick={this.updatePage(2)}>2</button>
         </div>
@@ -53,7 +53,7 @@ export class References extends Component {
           key={`refEmailInput:refEmail${page}`}
         />
 
-        <div>
+        <div className="form-nav">
           <button onClick={this.props.prevPage}>Prev</button>
         </div>
       </form>

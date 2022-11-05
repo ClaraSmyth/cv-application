@@ -6,7 +6,7 @@ export class Skills extends Component {
 
     return (
       <form className="form">
-        <h2>Skills</h2>
+        <h2 className="form-title">Skills</h2>
 
         <input
           id="skill1Input"
@@ -72,7 +72,7 @@ export class Skills extends Component {
           defaultValue={details.skill8}
         />
 
-        <div>
+        <div className="form-nav">
           <button onClick={this.props.prevPage}>Prev</button>
           <button onClick={this.props.nextPage}>Next</button>
         </div>

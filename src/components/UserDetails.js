@@ -6,7 +6,7 @@ export class UserDetails extends Component {
 
     return (
       <form className="form">
-        <h2>Details</h2>
+        <h2 className="form-title">Details</h2>
 
         <label htmlFor="firstNameInput">First Name</label>
         <input
@@ -44,7 +44,7 @@ export class UserDetails extends Component {
           defaultValue={details.intro}
         />
 
-        <div>
+        <div className="form-nav">
           <button onClick={this.props.nextPage}>Next</button>
         </div>
       </form>

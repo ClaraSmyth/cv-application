@@ -16,9 +16,9 @@ export class Experience extends Component {
 
     return (
       <form className="form">
-        <h2>Experience</h2>
+        <h2 className="form-title">Experience</h2>
 
-        <div>
+        <div className="form-pages">
           <button onClick={this.updatePage(1)}>1</button>
           <button onClick={this.updatePage(2)}>2</button>
           <button onClick={this.updatePage(3)}>3</button>
@@ -74,7 +74,7 @@ export class Experience extends Component {
           key={`descInput:desc${page}`}
         />
 
-        <div>
+        <div className="form-nav">
           <button onClick={this.props.prevPage}>Prev</button>
           <button onClick={this.props.nextPage}>Next</button>
         </div>
