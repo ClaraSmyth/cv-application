@@ -36,7 +36,7 @@ export class UserDetails extends Component {
         />
 
         <label htmlFor="infoInput">Intro</label>
-        <input
+        <textarea
           id="infoInput"
           name="infoInput"
           type="text"

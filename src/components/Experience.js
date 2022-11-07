@@ -65,10 +65,10 @@ export class Experience extends Component {
         />
 
         <label htmlFor="descInput">Description</label>
-        <input
+        <textarea
           id="descInput"
           name="descInput"
-          type="text"
+          type="textarea"
           onChange={updateDetails('experience', `desc${page}`)}
           defaultValue={details[`desc${page}`]}
           key={`descInput:desc${page}`}
