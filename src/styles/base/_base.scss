@@ -1,18 +1,25 @@
+:root {
+  --clr-primary: hsl(0 0% 100% / 1);
+  --clr-secondary: hsl(0 0% 83% / 1);
+
+  --grd-primary: linear-gradient(to right top, #c297ec, #b2a5f7, #a3b1fd, #97bcff, #90c6ff);
+}
+
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
-        'Droid Sans', 'Helvetica Neue', sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    background: url(../../assets/blurry-gradient-haikei.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+    'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: url(../../assets/blurry-gradient-haikei.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
 #root {
-    height: 100%;
+  height: 100%;
 }
