@@ -10,6 +10,11 @@ export class References extends Component {
     this.setState({ page: num });
   };
 
+  updateClass = (num) => {
+    const { page } = this.state;
+    return page === num ? 'active' : 'null';
+  };
+
   render() {
     const { details, updateDetails } = this.props;
     const { page } = this.state;
@@ -19,8 +24,12 @@ export class References extends Component {
         <h2 className="form-title">References</h2>
 
         <div className="form-pages">
-          <button onClick={this.updatePage(1)}>1</button>
-          <button onClick={this.updatePage(2)}>2</button>
+          <button className={this.updateClass(1)} onClick={this.updatePage(1)}>
+            1
+          </button>
+          <button className={this.updateClass(2)} onClick={this.updatePage(2)}>
+            2
+          </button>
         </div>
 
         <label htmlFor="websiteInput">Name</label>
