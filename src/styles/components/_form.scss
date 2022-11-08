@@ -8,14 +8,14 @@
   border-radius: 2rem;
 
   & input {
-    border: 2px solid var(--clr-secondary);
+    border: 3px solid var(--clr-secondary);
     border-radius: 100vmax;
     margin-bottom: 0.5rem;
     padding: 0rem 0.5rem;
 
     &:focus {
       outline: none;
-      border: 2px solid transparent;
+      border: 3px solid transparent;
       background-image: linear-gradient(var(--clr-primary), var(--clr-primary)), var(--grd-primary);
       background-origin: border-box;
       background-clip: padding-box, border-box;
@@ -23,7 +23,7 @@
   }
 
   & textarea {
-    border: 2px solid var(--clr-secondary);
+    border: 3px solid var(--clr-secondary);
     border-radius: 1rem;
     margin-bottom: 0.5rem;
     padding: 0rem 0.5rem;
@@ -31,7 +31,7 @@
 
     &:focus {
       outline: none;
-      border: 2px solid transparent;
+      border: 3px solid transparent;
       background-image: linear-gradient(var(--clr-primary), var(--clr-primary)), var(--grd-primary);
       background-origin: border-box;
       background-clip: padding-box, border-box;
@@ -45,14 +45,21 @@
   gap: 0.2rem;
   width: 100%;
 
-  & > button {
+  & button {
     cursor: pointer;
     aspect-ratio: 1;
     line-height: 0;
     padding: 0.6rem;
-    border: none;
+    border: 3px solid var(--clr-secondary);
     border-radius: 100vmax;
-    background-color: var(--clr-secondary);
+    background-color: var(--clr-primary);
+
+    &.active {
+      border: 3px solid transparent;
+      background-image: linear-gradient(var(--clr-primary), var(--clr-primary)), var(--grd-primary);
+      background-origin: border-box;
+      background-clip: padding-box, border-box;
+    }
   }
 }
 
@@ -61,7 +68,7 @@
   justify-content: space-around;
   width: 100%;
 
-  & > button {
+  & button {
     cursor: pointer;
     padding: 0.2rem 0.8rem;
     border: none;
