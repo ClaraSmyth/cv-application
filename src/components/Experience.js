@@ -55,26 +55,6 @@ export class Experience extends Component {
           key={`companyInput:company${page}`}
         />
 
-        <label htmlFor="fromDateInput">From</label>
-        <input
-          id="fromDateInput"
-          name="fromDateInput"
-          type="text"
-          onChange={updateDetails('experience', `fromDate${page}`)}
-          defaultValue={details[`fromDate${page}`]}
-          key={`fromDateInput:fromDate${page}`}
-        />
-
-        <label htmlFor="toDateInput">To</label>
-        <input
-          id="toDateInput"
-          name="toDateInput"
-          type="text"
-          onChange={updateDetails('experience', `toDate${page}`)}
-          defaultValue={details[`toDate${page}`]}
-          key={`toDateInput:toDate${page}`}
-        />
-
         <label htmlFor="descInput">Description</label>
         <textarea
           id="descInput"
@@ -84,6 +64,31 @@ export class Experience extends Component {
           defaultValue={details[`desc${page}`]}
           key={`descInput:desc${page}`}
         />
+
+        <div className="form-date-container">
+          <div>
+            <label htmlFor="fromDateInput">From</label>
+            <input
+              id="fromDateInput"
+              name="fromDateInput"
+              type="text"
+              onChange={updateDetails('experience', `fromDate${page}`)}
+              defaultValue={details[`fromDate${page}`]}
+              key={`fromDateInput:fromDate${page}`}
+            />
+          </div>
+          <div>
+            <label htmlFor="toDateInput">To</label>
+            <input
+              id="toDateInput"
+              name="toDateInput"
+              type="text"
+              onChange={updateDetails('experience', `toDate${page}`)}
+              defaultValue={details[`toDate${page}`]}
+              key={`toDateInput:toDate${page}`}
+            />
+          </div>
+        </div>
 
         <div className="form-nav">
           <button onClick={this.props.prevPage}>Prev</button>

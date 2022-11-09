@@ -55,25 +55,32 @@ export class Education extends Component {
           key={`issuerInput:issuer${page}`}
         />
 
-        <label htmlFor="fromDateInput">From</label>
-        <input
-          id="fromDateInput"
-          name="fromDateInput"
-          type="text"
-          onChange={updateDetails('education', `fromDate${page}`)}
-          defaultValue={details[`fromDate${page}`]}
-          key={`fromDateInput:fromDate${page}`}
-        />
+        <div className="form-date-container">
+          <div>
+            <label htmlFor="fromDateInput">From</label>
+            <input
+              id="fromDateInput"
+              name="fromDateInput"
+              type="text"
+              onChange={updateDetails('education', `fromDate${page}`)}
+              defaultValue={details[`fromDate${page}`]}
+              key={`fromDateInput:fromDate${page}`}
+            />
+          </div>
 
-        <label htmlFor="toDateInput">To</label>
-        <input
-          id="toDateInput"
-          name="toDateInput"
-          type="text"
-          onChange={updateDetails('education', `toDate${page}`)}
-          defaultValue={details[`toDate${page}`]}
-          key={`toDateInput:toDate${page}`}
-        />
+          <div>
+            <label htmlFor="toDateInput">To</label>
+            <input
+              id="toDateInput"
+              name="toDateInput"
+              type="text"
+              onChange={updateDetails('education', `toDate${page}`)}
+              defaultValue={details[`toDate${page}`]}
+              key={`toDateInput:toDate${page}`}
+            />
+          </div>
+        </div>
+
         <div className="form-nav">
           <button onClick={this.props.prevPage}>Prev</button>
           <button onClick={this.props.nextPage}>Next</button>
