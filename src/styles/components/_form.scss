@@ -1,17 +1,19 @@
 .form {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   background-color: var(--clr-primary);
   padding: 1rem;
   border-radius: 2rem;
+  width: 320px;
+  min-height: 480px;
 
   & input {
     border: 3px solid var(--clr-secondary);
     border-radius: 100vmax;
     margin-bottom: 0.5rem;
-    padding: 0rem 0.5rem;
+    padding: 0.2rem 0.8rem;
+    width: 100%;
 
     &:focus {
       outline: none;
@@ -24,9 +26,10 @@
 
   & textarea {
     border: 3px solid var(--clr-secondary);
-    border-radius: 1rem;
+    border-radius: 1.1rem;
     margin-bottom: 0.5rem;
-    padding: 0rem 0.5rem;
+    padding: 0.2rem 0.8rem;
+    width: 100%;
     resize: none;
 
     &:focus {
@@ -37,6 +40,14 @@
       background-clip: padding-box, border-box;
     }
   }
+
+  & > :nth-last-child(2) {
+    margin-bottom: auto;
+  }
+}
+
+.form-title {
+  margin-bottom: 0.5rem;
 }
 
 .form-pages {
@@ -44,6 +55,7 @@
   justify-content: center;
   gap: 0.2rem;
   width: 100%;
+  margin-bottom: 0.5rem;
 
   & button {
     cursor: pointer;
@@ -71,8 +83,33 @@
   & button {
     cursor: pointer;
     padding: 0.2rem 0.8rem;
-    border: none;
+    border: 3px solid var(--clr-secondary);
     border-radius: 100vmax;
     background-color: var(--clr-secondary);
+
+    &:hover,
+    &:focus {
+      outline: none;
+      border: 3px solid transparent;
+      background-image: linear-gradient(var(--clr-secondary), var(--clr-secondary)), var(--grd-primary);
+      background-origin: border-box;
+      background-clip: padding-box, border-box;
+    }
+  }
+}
+
+.form-date-container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+
+  & > div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    & input {
+      width: 6rem;
+    }
   }
 }
