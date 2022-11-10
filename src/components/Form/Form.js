@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import UserDetails from './UserDetails';
-import ContactDetails from './ContactDetails';
-import Education from './Education';
-import Experience from './Experience';
-import Skills from './Skills';
-import References from './References';
+import UserDetails from './components/UserDetails';
+import ContactDetails from './components/ContactDetails';
+import Education from './components/Education';
+import Experience from './components/Experience';
+import Skills from './components/Skills';
+import References from './components/References';
 
 class Form extends Component {
   state = {
