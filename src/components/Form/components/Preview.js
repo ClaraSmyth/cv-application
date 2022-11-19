@@ -4,14 +4,49 @@ class Preview extends Component {
   render() {
     const { userDetails, contactDetails, education, experience, skills, references } = this.props.details;
     return (
-      <div>
-        <div>
+      <div className="preview-container">
+        <div className="preview-sidebar">
+          <div>
+            <p>{contactDetails.location}</p>
+            <p>{contactDetails.phone}</p>
+            <p>{contactDetails.email}</p>
+            <p>{contactDetails.website}</p>
+          </div>
+
+          <div>
+            <p>Skills</p>
+            <p>{skills.skill1}</p>
+            <p>{skills.skill2}</p>
+            <p>{skills.skill3}</p>
+            <p>{skills.skill4}</p>
+            <p>{skills.skill5}</p>
+            <p>{skills.skill6}</p>
+            <p>{skills.skill7}</p>
+            <p>{skills.skill8}</p>
+          </div>
+
+          <div>
+            <p>References</p>
+            <div>
+              <p>{references.refName1}</p>
+              <p>{references.refPhone1}</p>
+              <p>{references.refEmail1}</p>
+            </div>
+            <div>
+              <p>{references.refName2}</p>
+              <p>{references.refPhone2}</p>
+              <p>{references.refEmail2}</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="preview-header">
           <h2>{userDetails.firstName}</h2>
           <h2>{userDetails.lastName}</h2>
           <p>{userDetails.jobTitle}</p>
         </div>
 
-        <div>
+        <div className="preview-main">
           <div>
             <h2>Introduction</h2>
             <p>{userDetails.intro}</p>
@@ -73,41 +108,6 @@ class Preview extends Component {
                 {experience.toDate3}
               </p>
               <p>{experience.desc3}</p>
-            </div>
-          </div>
-        </div>
-
-        <div>
-          <div>
-            <p>{contactDetails.location}</p>
-            <p>{contactDetails.phone}</p>
-            <p>{contactDetails.email}</p>
-            <p>{contactDetails.website}</p>
-          </div>
-
-          <div>
-            <p>Skills</p>
-            <p>{skills.skill1}</p>
-            <p>{skills.skill2}</p>
-            <p>{skills.skill3}</p>
-            <p>{skills.skill4}</p>
-            <p>{skills.skill5}</p>
-            <p>{skills.skill6}</p>
-            <p>{skills.skill7}</p>
-            <p>{skills.skill8}</p>
-          </div>
-
-          <div>
-            <p>References</p>
-            <div>
-              <p>{references.refName1}</p>
-              <p>{references.refPhone1}</p>
-              <p>{references.refEmail1}</p>
-            </div>
-            <div>
-              <p>{references.refName2}</p>
-              <p>{references.refPhone2}</p>
-              <p>{references.refEmail2}</p>
             </div>
           </div>
         </div>
