@@ -133,14 +133,33 @@
 }
 
 .preview-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
   grid-row: span 2;
   background-color: #c8c6c9;
 }
 
 .preview-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
   background-color: #dfdde0;
 }
 
 .preview-main {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
   background-color: #e7e7e7;
+}
+
+.image-placeholder {
+  width: 100%;
+  aspect-ratio: 1;
+  background-color: white;
+  border-radius: 50%;
+  border: 10px solid #c8c6c9;
+  outline: 8px double #c8c6c9;
+  outline-offset: -22px;
 }
