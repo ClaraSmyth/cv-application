@@ -10,7 +10,7 @@
   flex-direction: column;
   gap: 1rem;
   grid-row: span 2;
-  background-color: #c8c6c9;
+  background-color: var(--bg-clr-two);
   padding: 1.5rem;
 }
 
@@ -18,7 +18,7 @@
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  background-color: #dfdde0;
+  background-color: var(--bg-clr-one);
   padding: 1.5rem;
 }
 
@@ -26,7 +26,7 @@
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  background-color: #e7e7e7;
+  background-color: var(--bg-clr-three);
   padding: 1.5rem;
 }
 
