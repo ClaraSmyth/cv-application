@@ -1,0 +1,48 @@
+.preview-container {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: max-content;
+  aspect-ratio: 1 / 1.414;
+}
+
+.preview-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  grid-row: span 2;
+  background-color: #c8c6c9;
+  padding: 1.5rem;
+}
+
+.preview-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background-color: #dfdde0;
+  padding: 1.5rem;
+}
+
+.preview-main {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: #e7e7e7;
+  padding: 1.5rem;
+}
+
+.image-placeholder {
+  width: 100%;
+  aspect-ratio: 1;
+  background-color: white;
+  border-radius: 50%;
+  border: 10px solid #c8c6c9;
+  outline: 8px double #c8c6c9;
+  outline-offset: -22px;
+}
+
+.preview-education,
+.preview-experience {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
