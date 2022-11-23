@@ -39,7 +39,19 @@
   }
 
   p:nth-of-type(3) {
+    position: relative;
     font-size: var(--fs-500);
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: calc(50% - 0.3rem);
+      left: -1rem;
+      width: 0.6rem;
+      aspect-ratio: 1;
+      border-radius: 0.15rem;
+      background-color: var(--clr-three);
+    }
   }
 }
 
@@ -51,8 +63,20 @@
   padding: 1.5rem;
 
   h2 {
+    position: relative;
     color: var(--clr-three);
     font-size: var(--fs-600);
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: calc(50% - 0.3rem);
+      left: -1rem;
+      width: 0.6rem;
+      aspect-ratio: 1;
+      border-radius: 0.15rem;
+      background-color: var(--clr-three);
+    }
   }
 }
 
