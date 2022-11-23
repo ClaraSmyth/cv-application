@@ -6,6 +6,8 @@ class Preview extends Component {
     return (
       <div className="preview-container">
         <div className="preview-sidebar">
+          <div className="image-placeholder"></div>
+
           <div>
             <p>{contactDetails.location}</p>
             <p>{contactDetails.phone}</p>
@@ -14,7 +16,7 @@ class Preview extends Component {
           </div>
 
           <div>
-            <p>Skills</p>
+            <h2>Skills</h2>
             <p>{skills.skill1}</p>
             <p>{skills.skill2}</p>
             <p>{skills.skill3}</p>
@@ -26,7 +28,7 @@ class Preview extends Component {
           </div>
 
           <div>
-            <p>References</p>
+            <h2>References</h2>
             <div>
               <p>{references.refName1}</p>
               <p>{references.refPhone1}</p>
@@ -41,18 +43,18 @@ class Preview extends Component {
         </div>
 
         <div className="preview-header">
-          <h2>{userDetails.firstName}</h2>
-          <h2>{userDetails.lastName}</h2>
+          <p>{userDetails.firstName}</p>
+          <p>{userDetails.lastName}</p>
           <p>{userDetails.jobTitle}</p>
         </div>
 
         <div className="preview-main">
-          <div>
+          <div className="preview-intro">
             <h2>Introduction</h2>
             <p>{userDetails.intro}</p>
           </div>
 
-          <div>
+          <div className="preview-education">
             <h2>Education</h2>
             <div>
               <p>{education.qualification1}</p>
@@ -80,7 +82,7 @@ class Preview extends Component {
             </div>
           </div>
 
-          <div>
+          <div className="preview-experience">
             <h2>Experience</h2>
             <div>
               <p>{experience.company1}</p>
