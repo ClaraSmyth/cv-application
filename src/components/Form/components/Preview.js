@@ -15,7 +15,7 @@ class Preview extends Component {
             <p>{contactDetails.website}</p>
           </div>
 
-          <div>
+          <div className="preview-skills">
             <h2>Skills</h2>
             <p>{skills.skill1}</p>
             <p>{skills.skill2}</p>
@@ -27,7 +27,7 @@ class Preview extends Component {
             <p>{skills.skill8}</p>
           </div>
 
-          <div>
+          <div className="preview-references">
             <h2>References</h2>
             <div>
               <p>{references.refName1}</p>
