@@ -3,12 +3,14 @@
   grid-template-columns: 1fr 3fr;
   grid-template-rows: max-content;
   aspect-ratio: 1 / 1.414;
+  overflow: hidden;
+  font-size: var(--fs-300);
 }
 
 .preview-sidebar {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 0.5rem;
   grid-row: span 2;
   background-color: var(--bg-clr-two);
   padding: 1.5rem;
@@ -40,7 +42,7 @@
 
   p:nth-of-type(3) {
     position: relative;
-    font-size: var(--fs-500);
+    font-size: var(--fs-400);
 
     &::before {
       content: '';
@@ -58,7 +60,7 @@
 .preview-main {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 0.5rem;
   background-color: var(--bg-clr-three);
   padding: 1.5rem;
 
@@ -83,45 +85,35 @@
 .preview-education,
 .preview-experience,
 .preview-references {
-  div {
-    margin-bottom: 1rem;
-  }
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .preview-education {
   p:nth-of-type(2) {
     font-weight: bold;
-    font-size: var(--fs-500);
-  }
-
-  p:nth-of-type(3) {
-    font-size: var(--fs-300);
+    font-size: var(--fs-400);
+    line-height: 1;
   }
 }
 
 .preview-experience {
   p:nth-of-type(1) {
     font-weight: bold;
-    font-size: var(--fs-500);
+    font-size: var(--fs-400);
+    line-height: 1;
   }
 
   p:nth-of-type(2) {
-    font-size: var(--fs-500);
-  }
-
-  p:nth-of-type(3) {
-    font-size: var(--fs-300);
+    font-size: var(--fs-400);
+    line-height: 1;
   }
 }
 
 .preview-references div {
   p:nth-of-type(1) {
     font-weight: bold;
-  }
-
-  p:nth-of-type(2),
-  p:nth-of-type(3) {
-    font-size: var(--fs-300);
   }
 }
 
