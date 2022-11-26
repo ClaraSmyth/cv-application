@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
 
 class Preview extends Component {
+  headerCheck = (obj, name) => {
+    if (Object.values(obj).some((value) => value)) {
+      return <h2>{name}</h2>;
+    }
+  };
+
   render() {
     const { userDetails, contactDetails, education, experience, skills, references } = this.props.details;
     return (
@@ -9,6 +15,7 @@ class Preview extends Component {
           <div className="image-placeholder"></div>
 
           <div>
+            {this.headerCheck(contactDetails, 'Contact')}
             <p>{contactDetails.location}</p>
             <p>{contactDetails.phone}</p>
             <p>{contactDetails.email}</p>
@@ -16,7 +23,7 @@ class Preview extends Component {
           </div>
 
           <div className="preview-skills">
-            <h2>Skills</h2>
+            {this.headerCheck(skills, 'Skills')}
             <p>{skills.skill1}</p>
             <p>{skills.skill2}</p>
             <p>{skills.skill3}</p>
@@ -28,7 +35,7 @@ class Preview extends Component {
           </div>
 
           <div className="preview-references">
-            <h2>References</h2>
+            {this.headerCheck(references, 'References')}
             <div>
               <p>{references.refName1}</p>
               <p>{references.refPhone1}</p>
@@ -50,12 +57,12 @@ class Preview extends Component {
 
         <div className="preview-main">
           <div className="preview-intro">
-            <h2>Introduction</h2>
+            {this.headerCheck(userDetails.intro, 'Introduction')}
             <p>{userDetails.intro}</p>
           </div>
 
           <div className="preview-education">
-            <h2>Education</h2>
+            {this.headerCheck(education, 'Education')}
             <div>
               <p>{education.qualification1}</p>
               <p>{education.issuer1}</p>
@@ -83,7 +90,7 @@ class Preview extends Component {
           </div>
 
           <div className="preview-experience">
-            <h2>Experience</h2>
+            {this.headerCheck(experience, 'Experience')}
             <div>
               <p>{experience.company1}</p>
               <p>{experience.jobTitle1}</p>
