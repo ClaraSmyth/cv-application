@@ -52,7 +52,7 @@ class Preview extends Component {
         <div className="preview-header">
           <p>{userDetails.firstName}</p>
           <p>{userDetails.lastName}</p>
-          <p>{userDetails.jobTitle}</p>
+          {userDetails.jobTitle ? <p>{userDetails.jobTitle}</p> : ''}
         </div>
 
         <div className="preview-main">
