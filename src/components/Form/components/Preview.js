@@ -1,10 +1,25 @@
 import React, { Component } from 'react';
+import { BsGeoAltFill, BsFillTelephoneFill, BsFillEnvelopeFill, BsGlobe } from 'react-icons/bs';
 
 class Preview extends Component {
-  headerCheck = (obj, name) => {
+  addHeader = (obj, name) => {
     if (Object.values(obj).some((value) => value)) {
       return <h2>{name}</h2>;
     }
+  };
+
+  addPara = (obj) => {
+    if (obj) return <p>{obj}</p>;
+  };
+
+  addDate = (obj, obj2) => {
+    return (
+      <p>
+        {obj ? obj : ''}
+        {obj && obj2 ? ' - ' : ''}
+        {obj2 ? obj2 : ''}
+      </p>
+    );
   };
 
   render() {
@@ -14,109 +29,97 @@ class Preview extends Component {
         <div className="preview-sidebar">
           <div className="image-placeholder"></div>
 
-          <div>
-            {this.headerCheck(contactDetails, 'Contact')}
-            <p>{contactDetails.location}</p>
-            <p>{contactDetails.phone}</p>
-            <p>{contactDetails.email}</p>
-            <p>{contactDetails.website}</p>
+          <div className="preview-contact">
+            {contactDetails.location ? <BsGeoAltFill></BsGeoAltFill> : ''}
+            {this.addPara(contactDetails.location)}
+
+            {contactDetails.phone ? <BsFillTelephoneFill></BsFillTelephoneFill> : ''}
+            {this.addPara(contactDetails.phone)}
+
+            {contactDetails.email ? <BsFillEnvelopeFill></BsFillEnvelopeFill> : ''}
+            {this.addPara(contactDetails.email)}
+
+            {contactDetails.website ? <BsGlobe></BsGlobe> : ''}
+            {this.addPara(contactDetails.website)}
           </div>
 
           <div className="preview-skills">
-            {this.headerCheck(skills, 'Skills')}
-            <p>{skills.skill1}</p>
-            <p>{skills.skill2}</p>
-            <p>{skills.skill3}</p>
-            <p>{skills.skill4}</p>
-            <p>{skills.skill5}</p>
-            <p>{skills.skill6}</p>
-            <p>{skills.skill7}</p>
-            <p>{skills.skill8}</p>
+            {this.addHeader(skills, 'Skills')}
+            {this.addPara(skills.skill1)}
+            {this.addPara(skills.skill2)}
+            {this.addPara(skills.skill3)}
+            {this.addPara(skills.skill4)}
+            {this.addPara(skills.skill5)}
+            {this.addPara(skills.skill6)}
+            {this.addPara(skills.skill7)}
+            {this.addPara(skills.skill8)}
           </div>
 
           <div className="preview-references">
-            {this.headerCheck(references, 'References')}
+            {this.addHeader(references, 'References')}
             <div>
-              <p>{references.refName1}</p>
-              <p>{references.refPhone1}</p>
-              <p>{references.refEmail1}</p>
+              {this.addPara(references.refName1)}
+              {this.addPara(references.refPhone1)}
+              {this.addPara(references.refEmail1)}
             </div>
             <div>
-              <p>{references.refName2}</p>
-              <p>{references.refPhone2}</p>
-              <p>{references.refEmail2}</p>
+              {this.addPara(references.refName2)}
+              {this.addPara(references.refPhone2)}
+              {this.addPara(references.refEmail2)}
             </div>
           </div>
         </div>
 
         <div className="preview-header">
-          <p>{userDetails.firstName}</p>
-          <p>{userDetails.lastName}</p>
-          {userDetails.jobTitle ? <p>{userDetails.jobTitle}</p> : ''}
+          {this.addPara(userDetails.firstName)}
+          {this.addPara(userDetails.lastName)}
+          {this.addPara(userDetails.jobTitle)}
         </div>
 
         <div className="preview-main">
           <div className="preview-intro">
-            {this.headerCheck(userDetails.intro, 'Introduction')}
-            <p>{userDetails.intro}</p>
+            {this.addHeader(userDetails.intro, 'Introduction')}
+            {this.addPara(userDetails.intro)}
           </div>
 
           <div className="preview-education">
-            {this.headerCheck(education, 'Education')}
+            {this.addHeader(education, 'Education')}
             <div>
-              <p>{education.qualification1}</p>
-              <p>{education.issuer1}</p>
-              <p>
-                {education.fromDate1}
-                {education.toDate1}
-              </p>
+              {this.addPara(education.qualification1)}
+              {this.addPara(education.issuer1)}
+              {this.addDate(education.fromDate1, education.toDate1)}
             </div>
             <div>
-              <p>{education.qualification2}</p>
-              <p>{education.issuer2}</p>
-              <p>
-                {education.fromDate2}
-                {education.toDate2}
-              </p>
+              {this.addPara(education.qualification2)}
+              {this.addPara(education.issuer2)}
+              {this.addDate(education.fromDate2, education.toDate2)}
             </div>
             <div>
-              <p>{education.qualification3}</p>
-              <p>{education.issuer3}</p>
-              <p>
-                {education.fromDate3}
-                {education.toDate3}
-              </p>
+              {this.addPara(education.qualification3)}
+              {this.addPara(education.issuer3)}
+              {this.addDate(education.fromDate3, education.toDate3)}
             </div>
           </div>
 
           <div className="preview-experience">
-            {this.headerCheck(experience, 'Experience')}
+            {this.addHeader(experience, 'Experience')}
             <div>
-              <p>{experience.company1}</p>
-              <p>{experience.jobTitle1}</p>
-              <p>
-                {experience.fromDate1}
-                {experience.toDate1}
-              </p>
-              <p>{experience.desc1}</p>
+              {this.addPara(experience.company1)}
+              {this.addPara(experience.jobTitle1)}
+              {this.addDate(experience.fromDate1, experience.toDate1)}
+              {this.addPara(experience.desc1)}
             </div>
             <div>
-              <p>{experience.company2}</p>
-              <p>{experience.jobTitle2}</p>
-              <p>
-                {experience.fromDate2}
-                {experience.toDate2}
-              </p>
-              <p>{experience.desc2}</p>
+              {this.addPara(experience.company2)}
+              {this.addPara(experience.jobTitle2)}
+              {this.addDate(experience.fromDate2, experience.toDate2)}
+              {this.addPara(experience.desc2)}
             </div>
             <div>
-              <p>{experience.company3}</p>
-              <p>{experience.jobTitle3}</p>
-              <p>
-                {experience.fromDate3}
-                {experience.toDate3}
-              </p>
-              <p>{experience.desc3}</p>
+              {this.addPara(experience.company3)}
+              {this.addPara(experience.jobTitle3)}
+              {this.addDate(experience.fromDate3, experience.toDate3)}
+              {this.addPara(experience.desc3)}
             </div>
           </div>
         </div>
