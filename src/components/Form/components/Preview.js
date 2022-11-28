@@ -22,6 +22,10 @@ class Preview extends Component {
     );
   };
 
+  addIcon = (obj, icon) => {
+    if (obj) return <div>{icon}</div>;
+  };
+
   render() {
     const { userDetails, contactDetails, education, experience, skills, references } = this.props.details;
     return (
@@ -30,16 +34,16 @@ class Preview extends Component {
           <div className="image-placeholder"></div>
 
           <div className="preview-contact">
-            {contactDetails.location ? <BsGeoAltFill></BsGeoAltFill> : ''}
+            {this.addIcon(contactDetails.location, <BsGeoAltFill></BsGeoAltFill>)}
             {this.addPara(contactDetails.location)}
 
-            {contactDetails.phone ? <BsFillTelephoneFill></BsFillTelephoneFill> : ''}
+            {this.addIcon(contactDetails.phone, <BsFillTelephoneFill></BsFillTelephoneFill>)}
             {this.addPara(contactDetails.phone)}
 
-            {contactDetails.email ? <BsFillEnvelopeFill></BsFillEnvelopeFill> : ''}
+            {this.addIcon(contactDetails.email, <BsFillEnvelopeFill></BsFillEnvelopeFill>)}
             {this.addPara(contactDetails.email)}
 
-            {contactDetails.website ? <BsGlobe></BsGlobe> : ''}
+            {this.addIcon(contactDetails.website, <BsGlobe></BsGlobe>)}
             {this.addPara(contactDetails.website)}
           </div>
 
