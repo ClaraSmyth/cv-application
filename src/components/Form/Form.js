@@ -5,6 +5,8 @@ import Education from './components/Education';
 import Experience from './components/Experience';
 import Skills from './components/Skills';
 import References from './components/References';
+import Preview from './components/Preview';
+import { TransformComponent, TransformWrapper } from '@pronestor/react-zoom-pan-pinch';
 
 class Form extends Component {
   state = {
@@ -108,52 +110,100 @@ class Form extends Component {
     switch (page) {
       default:
         return (
-          <UserDetails details={details.userDetails} updateDetails={this.updateDetails} nextPage={this.nextPage} />
+          <div className="form-container">
+            <UserDetails details={details.userDetails} updateDetails={this.updateDetails} nextPage={this.nextPage} />
+
+            <TransformWrapper defaultScale={1} minScale={0.5} maxScale={1.5}>
+              <TransformComponent>
+                <Preview details={details} />
+              </TransformComponent>
+            </TransformWrapper>
+          </div>
         );
       case 2:
         return (
-          <ContactDetails
-            details={details.contactDetails}
-            updateDetails={this.updateDetails}
-            nextPage={this.nextPage}
-            prevPage={this.prevPage}
-          />
+          <div className="form-container">
+            <ContactDetails
+              details={details.contactDetails}
+              updateDetails={this.updateDetails}
+              nextPage={this.nextPage}
+              prevPage={this.prevPage}
+            />
+
+            <TransformWrapper defaultScale={1} minScale={0.5} maxScale={1.5}>
+              <TransformComponent>
+                <Preview details={details} />
+              </TransformComponent>
+            </TransformWrapper>
+          </div>
         );
       case 3:
         return (
-          <Education
-            details={details.education}
-            updateDetails={this.updateDetails}
-            nextPage={this.nextPage}
-            prevPage={this.prevPage}
-          />
+          <div className="form-container">
+            <Education
+              details={details.education}
+              updateDetails={this.updateDetails}
+              nextPage={this.nextPage}
+              prevPage={this.prevPage}
+            />
+
+            <TransformWrapper defaultScale={1} minScale={0.5} maxScale={1.5}>
+              <TransformComponent>
+                <Preview details={details} />
+              </TransformComponent>
+            </TransformWrapper>
+          </div>
         );
       case 4:
         return (
-          <Experience
-            details={details.experience}
-            updateDetails={this.updateDetails}
-            nextPage={this.nextPage}
-            prevPage={this.prevPage}
-          />
+          <div className="form-container">
+            <Experience
+              details={details.experience}
+              updateDetails={this.updateDetails}
+              nextPage={this.nextPage}
+              prevPage={this.prevPage}
+            />
+
+            <TransformWrapper defaultScale={1} minScale={0.5} maxScale={1.5}>
+              <TransformComponent>
+                <Preview details={details} />
+              </TransformComponent>
+            </TransformWrapper>
+          </div>
         );
       case 5:
         return (
-          <Skills
-            details={details.skills}
-            updateDetails={this.updateDetails}
-            nextPage={this.nextPage}
-            prevPage={this.prevPage}
-          />
+          <div className="form-container">
+            <Skills
+              details={details.skills}
+              updateDetails={this.updateDetails}
+              nextPage={this.nextPage}
+              prevPage={this.prevPage}
+            />
+
+            <TransformWrapper defaultScale={1} minScale={0.5} maxScale={1.5}>
+              <TransformComponent>
+                <Preview details={details} />
+              </TransformComponent>
+            </TransformWrapper>
+          </div>
         );
       case 6:
         return (
-          <References
-            details={details.references}
-            updateDetails={this.updateDetails}
-            nextPage={this.nextPage}
-            prevPage={this.prevPage}
-          />
+          <div className="form-container">
+            <References
+              details={details.references}
+              updateDetails={this.updateDetails}
+              nextPage={this.nextPage}
+              prevPage={this.prevPage}
+            />
+
+            <TransformWrapper defaultScale={1} minScale={0.5} maxScale={1.5}>
+              <TransformComponent>
+                <Preview details={details} />
+              </TransformComponent>
+            </TransformWrapper>
+          </div>
         );
     }
   }
