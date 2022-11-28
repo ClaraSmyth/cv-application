@@ -103,6 +103,13 @@ class Form extends Component {
     this.setState({ page: page - 1 });
   };
 
+  // Gets default scale for the transform component
+  getScale = () => {
+    const width = (1 / 700) * (window.innerWidth - 32);
+    const height = (1 / 989.8) * (window.innerHeight - 32);
+    return Math.min(width, height);
+  };
+
   render() {
     const details = { ...this.state };
     const { page } = this.state;
@@ -113,8 +120,8 @@ class Form extends Component {
           <div className="form-container">
             <UserDetails details={details.userDetails} updateDetails={this.updateDetails} nextPage={this.nextPage} />
 
-            <TransformWrapper defaultScale={1} minScale={0.5} maxScale={1.5}>
-              <TransformComponent>
+            <TransformWrapper initialScale={this.getScale()} minScale={0.3} maxScale={2} centerOnInit>
+              <TransformComponent wrapperClass="transform-wrapper">
                 <Preview details={details} />
               </TransformComponent>
             </TransformWrapper>
@@ -130,8 +137,14 @@ class Form extends Component {
               prevPage={this.prevPage}
             />
 
-            <TransformWrapper defaultScale={1} minScale={0.5} maxScale={1.5}>
-              <TransformComponent>
+            <TransformWrapper
+              className="transform-container"
+              initialScale={this.getScale()}
+              minScale={0.3}
+              maxScale={2}
+              centerOnInit
+            >
+              <TransformComponent wrapperClass="transform-wrapper">
                 <Preview details={details} />
               </TransformComponent>
             </TransformWrapper>
@@ -147,8 +160,14 @@ class Form extends Component {
               prevPage={this.prevPage}
             />
 
-            <TransformWrapper defaultScale={1} minScale={0.5} maxScale={1.5}>
-              <TransformComponent>
+            <TransformWrapper
+              className="transform-container"
+              initialScale={this.getScale()}
+              minScale={0.3}
+              maxScale={2}
+              centerOnInit
+            >
+              <TransformComponent wrapperClass="transform-wrapper">
                 <Preview details={details} />
               </TransformComponent>
             </TransformWrapper>
@@ -164,8 +183,14 @@ class Form extends Component {
               prevPage={this.prevPage}
             />
 
-            <TransformWrapper defaultScale={1} minScale={0.5} maxScale={1.5}>
-              <TransformComponent>
+            <TransformWrapper
+              className="transform-container"
+              initialScale={this.getScale()}
+              minScale={0.3}
+              maxScale={2}
+              centerOnInit
+            >
+              <TransformComponent wrapperClass="transform-wrapper">
                 <Preview details={details} />
               </TransformComponent>
             </TransformWrapper>
@@ -181,8 +206,14 @@ class Form extends Component {
               prevPage={this.prevPage}
             />
 
-            <TransformWrapper defaultScale={1} minScale={0.5} maxScale={1.5}>
-              <TransformComponent>
+            <TransformWrapper
+              className="transform-container"
+              initialScale={this.getScale()}
+              minScale={0.3}
+              maxScale={2}
+              centerOnInit
+            >
+              <TransformComponent wrapperClass="transform-wrapper">
                 <Preview details={details} />
               </TransformComponent>
             </TransformWrapper>
@@ -198,8 +229,14 @@ class Form extends Component {
               prevPage={this.prevPage}
             />
 
-            <TransformWrapper defaultScale={1} minScale={0.5} maxScale={1.5}>
-              <TransformComponent>
+            <TransformWrapper
+              className="transform-container"
+              initialScale={this.getScale()}
+              minScale={0.3}
+              maxScale={2}
+              centerOnInit
+            >
+              <TransformComponent wrapperClass="transform-wrapper">
                 <Preview details={details} />
               </TransformComponent>
             </TransformWrapper>
