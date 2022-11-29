@@ -27,11 +27,11 @@ class Preview extends Component {
   };
 
   render() {
-    const { userDetails, contactDetails, education, experience, skills, references } = this.props.details;
+    const { userDetails, contactDetails, education, experience, skills, references, canvas } = this.props.details;
     return (
       <div className="preview-container">
         <div className="preview-sidebar">
-          <div className="image-placeholder"></div>
+          <img className="image-placeholder" src={canvas} alt=""></img>
 
           <div className="preview-contact">
             {this.addIcon(contactDetails.location, <BsGeoAltFill></BsGeoAltFill>)}
