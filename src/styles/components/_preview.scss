@@ -154,8 +154,8 @@
   width: 100%;
   aspect-ratio: 1;
   background-color: white;
-  border-radius: 50%;
+  border-radius: 100vmax;
   border: 10px solid #c8c6c9;
-  outline: 8px double #c8c6c9;
-  outline-offset: -22px;
+  outline: 12px double white;
+  outline-offset: -12px;
 }
