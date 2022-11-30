@@ -18,7 +18,7 @@ class Form extends Component {
       lastName: 'Smyth',
       jobTitle: 'Frontend Web Developer',
       intro:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut a',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure do',
     },
 
     contactDetails: {
@@ -91,6 +91,7 @@ class Form extends Component {
 
     image: '',
     imagePosition: { x: 0.5, y: 0.5 },
+    imageScale: 1,
     canvas: '',
   };
 
@@ -206,14 +207,9 @@ class Form extends Component {
     }
   };
 
-  // Saves the image as a canvas
-  saveCanvas = (canvas) => {
-    this.setState({ canvas: canvas });
-  };
-
-  // Saves the Image position
-  saveImagePosition = (obj) => {
-    this.setState({ imagePosition: obj });
+  // Updates Image info in state
+  updateImageInfo = (obj, value) => {
+    this.setState({ [obj]: value });
   };
 
   render() {
@@ -352,11 +348,11 @@ class Form extends Component {
         return (
           <div className="form-container">
             <Image
-              details={details.image}
+              image={details.image}
               imagePosition={details.imagePosition}
+              imageScale={details.imageScale}
               updateImage={this.updateImage}
-              saveCanvas={this.saveCanvas}
-              saveImagePosition={this.saveImagePosition}
+              updateImageInfo={this.updateImageInfo}
               nextPage={this.nextPage}
               prevPage={this.prevPage}
             />

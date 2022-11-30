@@ -2,8 +2,13 @@ import React, { Component } from 'react';
 import AvatarEditor from 'react-avatar-editor';
 
 class Image extends Component {
+  handleZoom = (e) => {
+    this.props.updateImageInfo('imageScale', e.target.value / 50);
+    this.onClickSave();
+  };
+
   handlePositionChange = (position) => {
-    this.props.saveImagePosition(position);
+    this.props.updateImageInfo('imagePosition', position);
     this.onClickSave();
   };
 
@@ -16,7 +21,7 @@ class Image extends Component {
       // If you want the image resized to the canvas size (also a HTMLCanvasElement)
       // const canvasScaled = this.editor.getImageScaledToCanvas();
 
-      this.props.saveCanvas(canvas.toDataURL());
+      this.props.updateImageInfo('canvas', canvas.toDataURL());
     }
   };
 
@@ -29,12 +34,12 @@ class Image extends Component {
 
         <AvatarEditor
           ref={this.setEditorRef}
-          image={this.props.details}
+          image={this.props.image}
           width={250}
           height={250}
           border={0}
           color={[255, 255, 255, 0.6]} // RGBA
-          scale={1.2}
+          scale={this.props.imageScale}
           rotate={0}
           position={this.props.imagePosition}
           borderRadius={500}
@@ -42,6 +47,10 @@ class Image extends Component {
           onImageReady={this.onClickSave}
           onPositionChange={this.handlePositionChange}
         />
+
+        <div className="slider-container">
+          <input className="slider" type="range" min="25" max="100" defaultValue="62" onChange={this.handleZoom} />
+        </div>
 
         <input
           className="image-input"
@@ -51,7 +60,7 @@ class Image extends Component {
           onChange={this.props.updateImage}
         />
         <label className="image-label" htmlFor="imageInput">
-          Upload Image
+          Upload
         </label>
 
         <div className="form-nav">
