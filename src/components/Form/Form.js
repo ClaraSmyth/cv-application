@@ -26,6 +26,7 @@ class Form extends Component {
       phone: '00000000000',
       email: 'not-a-real-email@email.com',
       website: 'not-a-real-website.com',
+      linkedin: 'ClaraSmyth',
     },
 
     education: {

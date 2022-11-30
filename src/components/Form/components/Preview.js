@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BsGeoAltFill, BsFillTelephoneFill, BsFillEnvelopeFill, BsGlobe } from 'react-icons/bs';
+import { BsGeoAltFill, BsFillTelephoneFill, BsFillEnvelopeFill, BsGlobe, BsLinkedin } from 'react-icons/bs';
 
 class Preview extends Component {
   addHeader = (obj, name) => {
@@ -45,6 +45,9 @@ class Preview extends Component {
 
             {this.addIcon(contactDetails.website, <BsGlobe></BsGlobe>)}
             {this.addPara(contactDetails.website)}
+
+            {this.addIcon(contactDetails.linkedin, <BsLinkedin></BsLinkedin>)}
+            {this.addPara(contactDetails.linkedin)}
           </div>
 
           <div className="preview-skills">

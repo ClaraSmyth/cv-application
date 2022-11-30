@@ -43,6 +43,16 @@ export class ContactDetails extends Component {
           onChange={updateDetails('contactDetails', 'phone')}
           defaultValue={details.phone}
         />
+
+        <label htmlFor="linkedinInput">LinkedIn</label>
+        <input
+          id="linkedinInput"
+          name="linkedinInput"
+          type="text"
+          onChange={updateDetails('contactDetails', 'linkedin')}
+          defaultValue={details.linkedin}
+        />
+
         <div className="form-nav">
           <button onClick={this.props.prevPage}>Prev</button>
           <button onClick={this.props.nextPage}>Next</button>
