@@ -88,9 +88,9 @@ class Form extends Component {
       refEmail2: 'not-a-real-email@email.com',
     },
 
-    originalImage: 'test',
-    canvas: '',
+    image: '',
     imagePosition: { x: 0.5, y: 0.5 },
+    canvas: '',
   };
 
   // state = {
