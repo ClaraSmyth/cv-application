@@ -13,8 +13,8 @@
   background-color: var(--clr-one);
   padding: 1rem;
   border-radius: 2rem;
-  width: 320px;
-  min-height: 480px;
+  width: 20rem;
+  min-height: 30rem;
 
   & label {
     font-weight: bold;
@@ -30,7 +30,7 @@
 
     &:focus {
       outline: none;
-      border: 3px solid transparent;
+      border: 0.1875rem solid transparent;
       background-image: linear-gradient(var(--clr-one), var(--clr-one)), var(--grd-primary);
       background-origin: border-box;
       background-clip: padding-box, border-box;
@@ -38,7 +38,7 @@
   }
 
   & textarea {
-    border: 3px solid var(--clr-two);
+    border: 0.1875rem solid var(--clr-two);
     border-radius: 1.1rem;
     margin-bottom: 0.5rem;
     padding: 0.2rem 0.8rem;
@@ -48,7 +48,7 @@
 
     &:focus {
       outline: none;
-      border: 3px solid transparent;
+      border: 0.1875rem solid transparent;
       background-image: linear-gradient(var(--clr-one), var(--clr-one)), var(--grd-primary);
       background-origin: border-box;
       background-clip: padding-box, border-box;
@@ -76,12 +76,12 @@
     aspect-ratio: 1;
     line-height: 0;
     padding: 0.6rem;
-    border: 3px solid var(--clr-two);
+    border: 0.1875rem solid var(--clr-two);
     border-radius: 100vmax;
     background-color: var(--clr-one);
 
     &.active {
-      border: 3px solid transparent;
+      border: 0.1875rem solid transparent;
       background-image: linear-gradient(var(--clr-one), var(--clr-one)), var(--grd-primary);
       background-origin: border-box;
       background-clip: padding-box, border-box;
@@ -97,14 +97,14 @@
   & button {
     cursor: pointer;
     padding: 0.2rem 0.8rem;
-    border: 3px solid var(--clr-two);
+    border: 0.1875rem solid var(--clr-two);
     border-radius: 100vmax;
     background-color: var(--clr-two);
 
     &:hover,
     &:focus {
       outline: none;
-      border: 3px solid transparent;
+      border: 0.1875rem solid transparent;
       background-image: linear-gradient(var(--clr-two), var(--clr-two)), var(--grd-primary);
       background-origin: border-box;
       background-clip: padding-box, border-box;
@@ -153,14 +153,14 @@
 .image-confirm {
   cursor: pointer;
   padding: 0.2rem 0.8rem;
-  border: 3px solid var(--clr-two);
+  border: 0.1875rem solid var(--clr-two);
   border-radius: 100vmax;
   background-color: var(--clr-two);
   font-weight: bold;
 }
 
 .image-editor {
-  border: 3px solid var(--clr-two);
+  border: 0.1875rem solid var(--clr-two);
   border-radius: 1rem;
   margin-bottom: 1em;
 }
