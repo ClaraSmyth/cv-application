@@ -2,6 +2,11 @@ import React, { Component } from 'react';
 import AvatarEditor from 'react-avatar-editor';
 
 class Image extends Component {
+  handlePositionChange = (position) => {
+    this.props.saveImagePosition(position);
+    this.onClickSave();
+  };
+
   onClickSave = () => {
     if (this.editor) {
       // This returns a HTMLCanvasElement, it can be made into a data URL or a blob,
@@ -31,10 +36,11 @@ class Image extends Component {
           color={[255, 255, 255, 0.6]} // RGBA
           scale={1.2}
           rotate={0}
+          position={this.props.imagePosition}
           borderRadius={500}
           className={'image-editor'}
           onImageReady={this.onClickSave}
-          onPositionChange={this.onClickSave}
+          onPositionChange={this.handlePositionChange}
         />
 
         <input

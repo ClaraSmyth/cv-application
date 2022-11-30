@@ -89,6 +89,8 @@ class Form extends Component {
     },
 
     originalImage: 'test',
+    canvas: '',
+    imagePosition: { x: 0.5, y: 0.5 },
   };
 
   // state = {
@@ -206,6 +208,11 @@ class Form extends Component {
   // Saves the image as a canvas
   saveCanvas = (canvas) => {
     this.setState({ canvas: canvas });
+  };
+
+  // Saves the Image position
+  saveImagePosition = (obj) => {
+    this.setState({ imagePosition: obj });
   };
 
   render() {
@@ -345,8 +352,10 @@ class Form extends Component {
           <div className="form-container">
             <Image
               details={details.image}
+              imagePosition={details.imagePosition}
               updateImage={this.updateImage}
               saveCanvas={this.saveCanvas}
+              saveImagePosition={this.saveImagePosition}
               nextPage={this.nextPage}
               prevPage={this.prevPage}
             />
