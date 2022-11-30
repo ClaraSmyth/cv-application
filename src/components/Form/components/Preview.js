@@ -34,6 +34,7 @@ class Preview extends Component {
           <img className="image-placeholder" src={canvas} alt=""></img>
 
           <div className="preview-contact">
+            {this.addHeader(contactDetails, 'Contact')}
             {this.addIcon(contactDetails.location, <BsGeoAltFill></BsGeoAltFill>)}
             {this.addPara(contactDetails.location)}
 
