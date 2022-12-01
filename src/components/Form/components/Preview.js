@@ -26,12 +26,17 @@ class Preview extends Component {
     if (obj) return <div>{icon}</div>;
   };
 
+  addImage = (canvas) => {
+    if (canvas) return <img className="image-placeholder" src={canvas} alt=""></img>;
+    if (!canvas) return <div className="image-placeholder"></div>;
+  };
+
   render() {
     const { userDetails, contactDetails, education, experience, skills, references, canvas } = this.props.details;
     return (
       <div className="preview-container">
         <div className="preview-sidebar">
-          <img className="image-placeholder" src={canvas} alt=""></img>
+          {this.addImage(canvas)}
 
           <div className="preview-contact">
             {this.addHeader(contactDetails, 'Contact')}
