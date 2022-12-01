@@ -59,7 +59,7 @@ class Image extends Component {
           type="file"
           onChange={this.props.updateImage}
         />
-        <label className="image-label" htmlFor="imageInput">
+        <label className="image-confirm" htmlFor="imageInput">
           Upload
         </label>
 
