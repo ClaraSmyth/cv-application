@@ -86,7 +86,7 @@ const autofill = () => {
       refEmail2: `${firstNameRef2 + lastNameRef2}@email.com`,
     },
 
-    image: '',
+    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E",
     imagePosition: { x: 0.5, y: 0.5 },
     imageScale: 1,
     canvas: '',
