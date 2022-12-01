@@ -143,6 +143,23 @@ class Form extends Component {
     this.setState({ mobileClass: mobileClass === 'active' ? 'inactive' : 'active' });
   };
 
+  // Window resize code
+  setResizeRef = (resize) => (this.resize = resize);
+
+  resizeWindow = () => {
+    if (this.resize) {
+      this.resize.centerView(this.getScale());
+    }
+  };
+
+  componentDidMount() {
+    window.addEventListener('resize', this.resizeWindow);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.resizeWindow);
+  }
+
   render() {
     const details = { ...this.state };
     const { page } = this.state;
@@ -158,7 +175,13 @@ class Form extends Component {
               className={details.mobileClass}
             />
 
-            <TransformWrapper initialScale={this.getScale()} minScale={0.3} maxScale={2} centerOnInit>
+            <TransformWrapper
+              ref={this.setResizeRef}
+              initialScale={this.getScale()}
+              minScale={0.3}
+              maxScale={2}
+              centerOnInit
+            >
               <TransformComponent wrapperClass="transform-wrapper">
                 <Preview details={details} />
               </TransformComponent>
@@ -180,7 +203,7 @@ class Form extends Component {
             />
 
             <TransformWrapper
-              className="transform-container"
+              ref={this.setResizeRef}
               initialScale={this.getScale()}
               minScale={0.3}
               maxScale={2}
@@ -207,7 +230,7 @@ class Form extends Component {
             />
 
             <TransformWrapper
-              className="transform-container"
+              ref={this.setResizeRef}
               initialScale={this.getScale()}
               minScale={0.3}
               maxScale={2}
@@ -234,7 +257,7 @@ class Form extends Component {
             />
 
             <TransformWrapper
-              className="transform-container"
+              ref={this.setResizeRef}
               initialScale={this.getScale()}
               minScale={0.3}
               maxScale={2}
@@ -261,7 +284,7 @@ class Form extends Component {
             />
 
             <TransformWrapper
-              className="transform-container"
+              ref={this.setResizeRef}
               initialScale={this.getScale()}
               minScale={0.3}
               maxScale={2}
@@ -288,7 +311,7 @@ class Form extends Component {
             />
 
             <TransformWrapper
-              className="transform-container"
+              ref={this.setResizeRef}
               initialScale={this.getScale()}
               minScale={0.3}
               maxScale={2}
@@ -318,7 +341,7 @@ class Form extends Component {
             />
 
             <TransformWrapper
-              className="transform-container"
+              ref={this.setResizeRef}
               initialScale={this.getScale()}
               minScale={0.3}
               maxScale={2}
