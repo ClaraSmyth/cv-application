@@ -45,6 +45,7 @@ export class UserDetails extends Component {
         />
 
         <div className="form-nav">
+          <button onClick={this.props.autofillState}>Autofill</button>
           <button onClick={this.props.nextPage}>Next</button>
         </div>
       </form>
