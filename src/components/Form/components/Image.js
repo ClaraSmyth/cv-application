@@ -1,18 +1,31 @@
 import React, { Component } from 'react';
 import AvatarEditor from 'react-avatar-editor';
+import { toBlob } from 'html-to-image';
+import FileSaver from 'file-saver';
 
 class Image extends Component {
+  onSave = (e) => {
+    e.preventDefault();
+    toBlob(document.getElementById('save-node')).then(function (blob) {
+      if (window.saveAs) {
+        window.saveAs(blob, 'CV.png');
+      } else {
+        FileSaver.saveAs(blob, 'CV.png');
+      }
+    });
+  };
+
   handleZoom = (e) => {
     this.props.updateImageInfo('imageScale', e.target.value / 50);
-    this.onClickSave();
+    this.updateImage();
   };
 
   handlePositionChange = (position) => {
     this.props.updateImageInfo('imagePosition', position);
-    this.onClickSave();
+    this.updateImage();
   };
 
-  onClickSave = () => {
+  updateImage = () => {
     if (this.editor) {
       // This returns a HTMLCanvasElement, it can be made into a data URL or a blob,
       // drawn on another canvas, or added to the DOM.
@@ -44,7 +57,7 @@ class Image extends Component {
           position={this.props.imagePosition}
           borderRadius={500}
           className={'image-editor'}
-          onImageReady={this.onClickSave}
+          onImageReady={this.updateImage}
           onPositionChange={this.handlePositionChange}
         />
 
@@ -65,6 +78,7 @@ class Image extends Component {
 
         <div className="form-nav">
           <button onClick={this.props.prevPage}>Prev</button>
+          <button onClick={this.onSave}>Save</button>
         </div>
       </form>
     );
