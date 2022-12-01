@@ -6,7 +6,7 @@ export class UserDetails extends Component {
 
     return (
       <form className="form">
-        <h2 className="form-title">Details</h2>
+        <h2 className="form-title">Personal Details</h2>
 
         <label htmlFor="firstNameInput">First Name</label>
         <input
@@ -26,7 +26,7 @@ export class UserDetails extends Component {
           defaultValue={details.lastName}
         />
 
-        <label htmlFor="infoInput">Job Title</label>
+        <label htmlFor="titleInput">Job Title</label>
         <input
           id="titleInput"
           name="titleInput"
