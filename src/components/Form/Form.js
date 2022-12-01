@@ -123,8 +123,8 @@ class Form extends Component {
 
   // Gets default scale for the transform component
   getScale = () => {
-    const width = (1 / 700) * (window.innerWidth - 32);
-    const height = (1 / 989.8) * (window.innerHeight - 32);
+    const width = (1 / 1000) * (window.innerWidth - 32);
+    const height = (1 / 1414) * (window.innerHeight - 32);
     return Math.min(width, height);
   };
 
