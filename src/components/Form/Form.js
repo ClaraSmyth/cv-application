@@ -8,167 +8,91 @@ import References from './components/References';
 import Image from './components/Image';
 import Preview from './components/Preview';
 import { TransformComponent, TransformWrapper } from '@pronestor/react-zoom-pan-pinch';
+import { BsEyeFill } from 'react-icons/bs';
 
 class Form extends Component {
   state = {
     page: 1,
 
     userDetails: {
-      firstName: 'Clara',
-      lastName: 'Smyth',
-      jobTitle: 'Frontend Web Developer',
-      intro:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure do',
+      firstName: '',
+      lastName: '',
+      jobTitle: '',
+      intro: '',
     },
 
     contactDetails: {
-      location: 'Northern Ireland',
-      phone: '00000000000',
-      email: 'not-a-real-email@email.com',
-      website: 'not-a-real-website.com',
-      linkedin: 'ClaraSmyth',
+      location: '',
+      phone: '',
+      email: '',
+      website: '',
+      linkedin: '',
     },
 
     education: {
-      qualification1: 'Computer Science',
-      issuer1: 'Random School and College',
-      fromDate1: '2004',
-      toDate1: '2008',
+      qualification1: '',
+      issuer1: '',
+      fromDate1: '',
+      toDate1: '',
 
-      qualification2: 'Business Management',
-      issuer2: 'University of Random Subjects, UK',
-      fromDate2: '2008',
-      toDate2: '2012',
+      qualification2: '',
+      issuer2: '',
+      fromDate2: '',
+      toDate2: '',
 
-      qualification3: 'Multimedia and Creative Technology',
-      issuer3: 'University of Random Subjects, UK',
-      fromDate3: '2012',
-      toDate3: '2016',
+      qualification3: '',
+      issuer3: '',
+      fromDate3: '',
+      toDate3: '',
     },
 
     experience: {
-      jobTitle1: 'Web and UX Designer',
-      company1: 'Random Design Studio LTD.',
-      fromDate1: '2016',
-      toDate1: '2017',
-      desc1:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut a',
+      jobTitle1: '',
+      company1: '',
+      fromDate1: '',
+      toDate1: '',
+      desc1: '',
 
-      jobTitle2: 'UI UX Designer',
-      company2: 'Random Company Name',
-      fromDate2: '2017',
-      toDate2: '2018',
-      desc2:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut a',
+      jobTitle2: '',
+      company2: '',
+      fromDate2: '',
+      toDate2: '',
+      desc2: '',
 
-      jobTitle3: 'Full Stack Web Developer',
-      company3: 'Really Long Pointless Random Company Name',
-      fromDate3: '2018',
-      toDate3: 'Present',
-      desc3:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut a',
+      jobTitle3: '',
+      company3: '',
+      fromDate3: '',
+      toDate3: '',
+      desc3: '',
     },
 
     skills: {
-      skill1: 'Javascript',
-      skill2: 'React',
-      skill3: 'HTML',
-      skill4: 'CSS',
-      skill5: 'SASS',
-      skill6: 'Jest',
-      skill7: 'ESLint',
-      skill8: 'Prettier',
+      skill1: '',
+      skill2: '',
+      skill3: '',
+      skill4: '',
+      skill5: '',
+      skill6: '',
+      skill7: '',
+      skill8: '',
     },
 
     references: {
-      refName1: 'John Smith',
-      refPhone1: '00000000000',
-      refEmail1: 'not-a-real-email@email.com',
-      refName2: 'Jane Doe',
-      refPhone2: '00000000000',
-      refEmail2: 'not-a-real-email@email.com',
+      refName1: '',
+      refPhone1: '',
+      refEmail1: '',
+      refName2: '',
+      refPhone2: '',
+      refEmail2: '',
     },
 
     image: '',
     imagePosition: { x: 0.5, y: 0.5 },
     imageScale: 1,
     canvas: '',
+
+    mobileClass: 'inactive',
   };
-
-  // state = {
-  //   page: 1,
-
-  //   userDetails: {
-  //     firstName: '',
-  //     lastName: '',
-  //     jobTitle: '',
-  //     intro: '',
-  //   },
-
-  //   contactDetails: {
-  //     location: '',
-  //     phone: '',
-  //     email: '',
-  //     website: '',
-  //   },
-
-  //   education: {
-  //     qualification1: '',
-  //     issuer1: '',
-  //     fromDate1: '',
-  //     toDate1: '',
-
-  //     qualification2: '',
-  //     issuer2: '',
-  //     fromDate2: '',
-  //     toDate2: '',
-
-  //     qualification3: '',
-  //     issuer3: '',
-  //     fromDate3: '',
-  //     toDate3: '',
-  //   },
-
-  //   experience: {
-  //     jobTitle1: '',
-  //     company1: '',
-  //     fromDate1: '',
-  //     toDate1: '',
-  //     desc1: '',
-
-  //     jobTitle2: '',
-  //     company2: '',
-  //     fromDate2: '',
-  //     toDate2: '',
-  //     desc2: '',
-
-  //     jobTitle3: '',
-  //     company3: '',
-  //     fromDate3: '',
-  //     toDate3: '',
-  //     desc3: '',
-  //   },
-
-  //   skills: {
-  //     skill1: '',
-  //     skill2: '',
-  //     skill3: '',
-  //     skill4: '',
-  //     skill5: '',
-  //     skill6: '',
-  //     skill7: '',
-  //     skill8: '',
-  //   },
-
-  //   references: {
-  //     refName1: '',
-  //     refPhone1: '',
-  //     refEmail1: '',
-  //     refName2: '',
-  //     refPhone2: '',
-  //     refEmail2: '',
-  //   },
-  // };
 
   // Updates the details in state
   updateDetails = (page, input) => (e) => {
@@ -212,6 +136,13 @@ class Form extends Component {
     this.setState({ [obj]: value });
   };
 
+  // Updates Mobile class in state
+  updateMobileClass = (e) => {
+    e.preventDefault();
+    const { mobileClass } = this.state;
+    this.setState({ mobileClass: mobileClass === 'active' ? 'inactive' : 'active' });
+  };
+
   render() {
     const details = { ...this.state };
     const { page } = this.state;
@@ -219,19 +150,28 @@ class Form extends Component {
     switch (page) {
       default:
         return (
-          <div className="form-container">
-            <UserDetails details={details.userDetails} updateDetails={this.updateDetails} nextPage={this.nextPage} />
+          <div className={`form-container ${details.mobileClass}`}>
+            <UserDetails
+              details={details.userDetails}
+              updateDetails={this.updateDetails}
+              nextPage={this.nextPage}
+              className={details.mobileClass}
+            />
 
             <TransformWrapper initialScale={this.getScale()} minScale={0.3} maxScale={2} centerOnInit>
               <TransformComponent wrapperClass="transform-wrapper">
                 <Preview details={details} />
               </TransformComponent>
             </TransformWrapper>
+
+            <button className="close-preview" onClick={this.updateMobileClass}>
+              Preview <BsEyeFill></BsEyeFill>
+            </button>
           </div>
         );
       case 2:
         return (
-          <div className="form-container">
+          <div className={`form-container ${details.mobileClass}`}>
             <ContactDetails
               details={details.contactDetails}
               updateDetails={this.updateDetails}
@@ -250,11 +190,15 @@ class Form extends Component {
                 <Preview details={details} />
               </TransformComponent>
             </TransformWrapper>
+
+            <button className="close-preview" onClick={this.updateMobileClass}>
+              Preview <BsEyeFill></BsEyeFill>
+            </button>
           </div>
         );
       case 3:
         return (
-          <div className="form-container">
+          <div className={`form-container ${details.mobileClass}`}>
             <Education
               details={details.education}
               updateDetails={this.updateDetails}
@@ -273,11 +217,15 @@ class Form extends Component {
                 <Preview details={details} />
               </TransformComponent>
             </TransformWrapper>
+
+            <button className="close-preview" onClick={this.updateMobileClass}>
+              Preview <BsEyeFill></BsEyeFill>
+            </button>
           </div>
         );
       case 4:
         return (
-          <div className="form-container">
+          <div className={`form-container ${details.mobileClass}`}>
             <Experience
               details={details.experience}
               updateDetails={this.updateDetails}
@@ -296,11 +244,15 @@ class Form extends Component {
                 <Preview details={details} />
               </TransformComponent>
             </TransformWrapper>
+
+            <button className="close-preview" onClick={this.updateMobileClass}>
+              Preview <BsEyeFill></BsEyeFill>
+            </button>
           </div>
         );
       case 5:
         return (
-          <div className="form-container">
+          <div className={`form-container ${details.mobileClass}`}>
             <Skills
               details={details.skills}
               updateDetails={this.updateDetails}
@@ -319,11 +271,15 @@ class Form extends Component {
                 <Preview details={details} />
               </TransformComponent>
             </TransformWrapper>
+
+            <button className="close-preview" onClick={this.updateMobileClass}>
+              Preview <BsEyeFill></BsEyeFill>
+            </button>
           </div>
         );
       case 6:
         return (
-          <div className="form-container">
+          <div className={`form-container ${details.mobileClass}`}>
             <References
               details={details.references}
               updateDetails={this.updateDetails}
@@ -342,11 +298,15 @@ class Form extends Component {
                 <Preview details={details} />
               </TransformComponent>
             </TransformWrapper>
+
+            <button className="close-preview" onClick={this.updateMobileClass}>
+              Preview <BsEyeFill></BsEyeFill>
+            </button>
           </div>
         );
       case 7:
         return (
-          <div className="form-container">
+          <div className={`form-container ${details.mobileClass}`}>
             <Image
               image={details.image}
               imagePosition={details.imagePosition}
@@ -368,6 +328,10 @@ class Form extends Component {
                 <Preview details={details} />
               </TransformComponent>
             </TransformWrapper>
+
+            <button className="close-preview" onClick={this.updateMobileClass}>
+              Preview <BsEyeFill></BsEyeFill>
+            </button>
           </div>
         );
     }
