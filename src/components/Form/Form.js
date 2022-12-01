@@ -9,6 +9,7 @@ import Image from './components/Image';
 import Preview from './components/Preview';
 import { TransformComponent, TransformWrapper } from '@pronestor/react-zoom-pan-pinch';
 import { BsEyeFill } from 'react-icons/bs';
+import autofill from '../Utilities/Autofill';
 
 class Form extends Component {
   state = {
@@ -94,6 +95,13 @@ class Form extends Component {
     mobileClass: 'inactive',
   };
 
+  // Autofills all fields in state
+  autofillState = (e) => {
+    e.preventDefault();
+    const data = autofill();
+    this.setState(data);
+  };
+
   // Updates the details in state
   updateDetails = (page, input) => (e) => {
     this.setState((prevState) => ({ [page]: { ...prevState[page], [input]: e.target.value } }));
@@ -172,6 +180,7 @@ class Form extends Component {
               details={details.userDetails}
               updateDetails={this.updateDetails}
               nextPage={this.nextPage}
+              autofillState={this.autofillState}
               className={details.mobileClass}
             />
 
