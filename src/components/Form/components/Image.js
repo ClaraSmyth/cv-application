@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import AvatarEditor from 'react-avatar-editor';
-import { toBlob } from 'html-to-image';
+import domtoimage from 'dom-to-image';
 import FileSaver from 'file-saver';
 
 class Image extends Component {
   onSave = (e) => {
     e.preventDefault();
-    toBlob(document.getElementById('save-node')).then(function (blob) {
+    domtoimage.toBlob(document.getElementById('save-node')).then(function (blob) {
       if (window.saveAs) {
         window.saveAs(blob, 'CV.png');
       } else {
