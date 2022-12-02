@@ -17,6 +17,7 @@
   width: 20rem;
   min-height: 30rem;
   margin: 0rem 1rem;
+  box-shadow: var(--shadow-light);
 
   label {
     font-weight: bold;
@@ -30,7 +31,7 @@
     width: 100%;
     text-align: center;
 
-    &:focus {
+    &:focus-visible {
       outline: none;
       border: 0.1875rem solid transparent;
       background-image: linear-gradient(var(--clr-one), var(--clr-one)), var(--grd-primary);
@@ -48,7 +49,7 @@
     resize: none;
     text-align: center;
 
-    &:focus {
+    &:focus-visible {
       outline: none;
       border: 0.1875rem solid transparent;
       background-image: linear-gradient(var(--clr-one), var(--clr-one)), var(--grd-primary);
@@ -104,7 +105,7 @@
     background-color: var(--clr-two);
 
     &:hover,
-    &:focus {
+    &:focus-visible {
       outline: none;
       border: 0.1875rem solid transparent;
       background-image: linear-gradient(var(--clr-two), var(--clr-two)), var(--grd-primary);
@@ -178,7 +179,7 @@
   width: 100%;
   padding: 0.5rem 2rem;
 
-  input {
+  .slider {
     -webkit-appearance: none;
     appearance: none;
     width: 100%;
@@ -186,16 +187,26 @@
     background: var(--clr-two);
     border: none;
     outline: none;
+    font-size: var(--fs-400);
 
     &:hover,
-    &:focus {
+    &:focus-visible {
       border: none;
       background: var(--clr-two);
     }
 
-    &::-webkit-slider-thumb,
-    &::-moz-range-thumb {
+    &::-webkit-slider-thumb {
       -webkit-appearance: none;
+      appearance: none;
+      width: 1.8rem;
+      height: 1.8rem;
+      background: var(--clr-one);
+      border: 0.3rem solid var(--clr-two);
+      border-radius: 100vmax;
+      cursor: pointer;
+    }
+
+    &::-moz-range-thumb {
       appearance: none;
       width: 1.25rem;
       height: 1.25rem;
@@ -222,11 +233,17 @@
     border: 0.1875rem solid var(--clr-one);
     border-radius: 100vmax;
     cursor: pointer;
+    transition: transform 100ms ease-in;
 
     svg {
       position: relative;
       width: 1rem;
       height: 1rem;
+    }
+
+    &:hover,
+    &:focus-visible {
+      transform: scale(1.05);
     }
   }
 
@@ -256,8 +273,8 @@
       .close-preview {
         position: absolute;
         bottom: 1.5rem;
-        background-color: hsl(0 100% 75% / 1);
-        border: 0.2rem solid hsl(0 100% 75% / 1);
+        background-color: var(--clr-danger);
+        border: 0.2rem solid var(--clr-danger);
       }
     }
   }
