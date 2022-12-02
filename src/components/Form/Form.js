@@ -191,7 +191,7 @@ class Form extends Component {
               maxScale={2}
               centerOnInit
             >
-              <TransformComponent wrapperClass="transform-wrapper">
+              <TransformComponent wrapperClass="transform-wrapper" contentClass="transform-content">
                 <Preview details={details} />
               </TransformComponent>
             </TransformWrapper>
@@ -218,7 +218,7 @@ class Form extends Component {
               maxScale={2}
               centerOnInit
             >
-              <TransformComponent wrapperClass="transform-wrapper">
+              <TransformComponent wrapperClass="transform-wrapper" contentClass="transform-content">
                 <Preview details={details} />
               </TransformComponent>
             </TransformWrapper>
@@ -245,7 +245,7 @@ class Form extends Component {
               maxScale={2}
               centerOnInit
             >
-              <TransformComponent wrapperClass="transform-wrapper">
+              <TransformComponent wrapperClass="transform-wrapper" contentClass="transform-content">
                 <Preview details={details} />
               </TransformComponent>
             </TransformWrapper>
@@ -272,7 +272,7 @@ class Form extends Component {
               maxScale={2}
               centerOnInit
             >
-              <TransformComponent wrapperClass="transform-wrapper">
+              <TransformComponent wrapperClass="transform-wrapper" contentClass="transform-content">
                 <Preview details={details} />
               </TransformComponent>
             </TransformWrapper>
@@ -299,7 +299,7 @@ class Form extends Component {
               maxScale={2}
               centerOnInit
             >
-              <TransformComponent wrapperClass="transform-wrapper">
+              <TransformComponent wrapperClass="transform-wrapper" contentClass="transform-content">
                 <Preview details={details} />
               </TransformComponent>
             </TransformWrapper>
@@ -326,7 +326,7 @@ class Form extends Component {
               maxScale={2}
               centerOnInit
             >
-              <TransformComponent wrapperClass="transform-wrapper">
+              <TransformComponent wrapperClass="transform-wrapper" contentClass="transform-content">
                 <Preview details={details} />
               </TransformComponent>
             </TransformWrapper>
@@ -356,7 +356,7 @@ class Form extends Component {
               maxScale={2}
               centerOnInit
             >
-              <TransformComponent wrapperClass="transform-wrapper">
+              <TransformComponent wrapperClass="transform-wrapper" contentClass="transform-content">
                 <Preview details={details} />
               </TransformComponent>
             </TransformWrapper>

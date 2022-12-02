@@ -136,6 +136,11 @@
   max-width: 60%;
 }
 
+.transform-content {
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
 .image-input {
   border: 0;
   clip: rect(0, 0, 0, 0);

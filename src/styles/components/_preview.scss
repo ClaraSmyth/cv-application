@@ -5,7 +5,6 @@
   aspect-ratio: 1 / 1.414;
   width: 62.5rem;
   overflow: hidden;
-  border-radius: 1rem;
   font-size: var(--fs-450);
 }
 
@@ -160,7 +159,7 @@
   aspect-ratio: 1;
   background-color: white;
   border-radius: 100vmax;
-  border: 0.625rem solid #c8c6c9;
+  border: 2.5rem solid var(--bg-clr-two);
   outline: 0.75rem double white;
-  outline-offset: -0.75rem;
+  outline-offset: -2.6rem;
 }
