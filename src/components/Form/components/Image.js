@@ -78,7 +78,7 @@ class Image extends Component {
 
         <div className="form-nav">
           <button onClick={this.props.prevPage}>Prev</button>
-          <button onClick={this.onSave}>Save</button>
+          <button onClick={this.props.nextPage}>Next</button>
         </div>
       </form>
     );

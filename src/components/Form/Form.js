@@ -5,6 +5,7 @@ import Education from './components/Education';
 import Experience from './components/Experience';
 import Skills from './components/Skills';
 import References from './components/References';
+import Theme from './components/Theme';
 import Image from './components/Image';
 import Preview from './components/Preview';
 import { TransformComponent, TransformWrapper } from '@pronestor/react-zoom-pan-pinch';
@@ -93,6 +94,8 @@ class Form extends Component {
     canvas: '',
 
     mobileClass: 'inactive',
+
+    themeColour: 'default',
   };
 
   // Autofills all fields in state
@@ -344,6 +347,34 @@ class Form extends Component {
               imagePosition={details.imagePosition}
               imageScale={details.imageScale}
               updateImage={this.updateImage}
+              updateImageInfo={this.updateImageInfo}
+              nextPage={this.nextPage}
+              prevPage={this.prevPage}
+            />
+
+            <TransformWrapper
+              ref={this.setResizeRef}
+              initialScale={this.getScale()}
+              minScale={0.3}
+              maxScale={2}
+              centerOnInit
+            >
+              <TransformComponent wrapperClass="transform-wrapper" contentClass="transform-content">
+                <Preview details={details} />
+              </TransformComponent>
+            </TransformWrapper>
+
+            <button className="close-preview" onClick={this.updateMobileClass}>
+              Preview <BsEyeFill></BsEyeFill>
+            </button>
+          </div>
+        );
+      case 8:
+        return (
+          <div className={`form-container ${details.mobileClass}`}>
+            <Theme
+              details={details.themeColour}
+              updateDetails={this.updateDetails}
               updateImageInfo={this.updateImageInfo}
               nextPage={this.nextPage}
               prevPage={this.prevPage}

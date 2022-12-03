@@ -131,6 +131,24 @@
   }
 }
 
+.preset-container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  border: 0.1875rem solid var(--clr-two);
+  padding: 0.2rem 0.8rem;
+  width: 100%;
+  border-radius: 100vmax;
+
+  button {
+    aspect-ratio: 1;
+    width: 1.5rem;
+    background-color: var(--clr-three);
+    border-radius: 100vmax;
+    border: none;
+  }
+}
+
 .transform-wrapper {
   max-height: 100%;
   min-height: 100%;

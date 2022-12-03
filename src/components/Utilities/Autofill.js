@@ -51,19 +51,19 @@ const autofill = () => {
       company1: 'BT',
       fromDate1: '2015',
       toDate1: '2016',
-      desc1: faker.lorem.paragraph(3),
+      desc1: faker.lorem.paragraph(2),
 
       jobTitle2: 'Front End Web Developer',
       company2: 'Amazon',
       fromDate2: '2016',
       toDate2: '2019',
-      desc2: faker.lorem.paragraph(3),
+      desc2: faker.lorem.paragraph(2),
 
       jobTitle3: 'Full Stack Web Developer',
       company3: 'Google',
       fromDate3: '2019',
       toDate3: 'Present',
-      desc3: faker.lorem.paragraph(3),
+      desc3: faker.lorem.paragraph(2),
     },
 
     skills: {
