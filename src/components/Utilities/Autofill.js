@@ -93,7 +93,7 @@ const autofill = () => {
 
     mobileClass: 'inactive',
 
-    themeColour: 'default',
+    themeClass: 'default-theme',
   };
 };
 
