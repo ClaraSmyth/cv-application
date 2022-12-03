@@ -95,7 +95,7 @@ class Form extends Component {
 
     mobileClass: 'inactive',
 
-    themeColour: 'default',
+    themeClass: 'default',
   };
 
   // Updates a value in state
@@ -245,7 +245,7 @@ class Form extends Component {
       case 8:
         return (
           <Theme
-            themeColour={details.themeColour}
+            themeClass={details.themeClass}
             updateDetails={this.updateDetails}
             updateValue={this.updateValue}
             nextPage={this.nextPage}

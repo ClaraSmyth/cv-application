@@ -32,10 +32,10 @@ class Preview extends Component {
   };
 
   render() {
-    const { userDetails, contactDetails, education, experience, skills, references, canvas, themeColour } =
+    const { userDetails, contactDetails, education, experience, skills, references, canvas, themeClass } =
       this.props.details;
     return (
-      <div id="save-node" className={`preview-container ${themeColour}-theme`}>
+      <div id="save-node" className={`preview-container ${themeClass}`}>
         <div className="preview-sidebar">
           {this.addImage(canvas)}
 
