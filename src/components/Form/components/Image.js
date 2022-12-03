@@ -16,12 +16,12 @@ class Image extends Component {
   };
 
   handleZoom = (e) => {
-    this.props.updateImageInfo('imageScale', e.target.value / 50);
+    this.props.updateValue('imageScale', e.target.value / 50);
     this.updateImage();
   };
 
   handlePositionChange = (position) => {
-    this.props.updateImageInfo('imagePosition', position);
+    this.props.updateValue('imagePosition', position);
     this.updateImage();
   };
 
@@ -34,7 +34,7 @@ class Image extends Component {
       // If you want the image resized to the canvas size (also a HTMLCanvasElement)
       // const canvasScaled = this.editor.getImageScaledToCanvas();
 
-      this.props.updateImageInfo('canvas', canvas.toDataURL());
+      this.props.updateValue('canvas', canvas.toDataURL());
     }
   };
 

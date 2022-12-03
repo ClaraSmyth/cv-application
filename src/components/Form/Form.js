@@ -98,14 +98,12 @@ class Form extends Component {
     themeColour: 'default',
   };
 
-  // Autofills all fields in state
-  autofillState = (e) => {
-    e.preventDefault();
-    const data = autofill();
-    this.setState(data);
+  // Updates a value in state
+  updateValue = (name, value) => {
+    this.setState({ [name]: value });
   };
 
-  // Updates the details in state
+  // Updates the form details in state
   updateDetails = (page, input) => (e) => {
     this.setState((prevState) => ({ [page]: { ...prevState[page], [input]: e.target.value } }));
   };
@@ -124,6 +122,13 @@ class Form extends Component {
     this.setState({ page: page - 1 });
   };
 
+  // Autofills all fields in state
+  autofillState = (e) => {
+    e.preventDefault();
+    const data = autofill();
+    this.setState(data);
+  };
+
   // Gets default scale for the transform component
   getScale = () => {
     const width = (1 / 1000) * (window.innerWidth - 32);
@@ -140,11 +145,6 @@ class Form extends Component {
       };
       reader.readAsDataURL(event.target.files[0]);
     }
-  };
-
-  // Updates Image info in state
-  updateImageInfo = (obj, value) => {
-    this.setState({ [obj]: value });
   };
 
   // Updates Mobile class in state
@@ -171,233 +171,113 @@ class Form extends Component {
     window.removeEventListener('resize', this.resizeWindow);
   }
 
-  render() {
-    const details = { ...this.state };
+  switchPage = () => {
+    const details = this.state;
     const { page } = this.state;
 
     switch (page) {
       default:
         return (
-          <div className={`form-container ${details.mobileClass}`}>
-            <UserDetails
-              details={details.userDetails}
-              updateDetails={this.updateDetails}
-              nextPage={this.nextPage}
-              autofillState={this.autofillState}
-              className={details.mobileClass}
-            />
-
-            <TransformWrapper
-              ref={this.setResizeRef}
-              initialScale={this.getScale()}
-              minScale={0.3}
-              maxScale={2}
-              centerOnInit
-            >
-              <TransformComponent wrapperClass="transform-wrapper" contentClass="transform-content">
-                <Preview details={details} />
-              </TransformComponent>
-            </TransformWrapper>
-
-            <button className="close-preview" onClick={this.updateMobileClass}>
-              Preview <BsEyeFill></BsEyeFill>
-            </button>
-          </div>
+          <UserDetails
+            details={details.userDetails}
+            updateDetails={this.updateDetails}
+            nextPage={this.nextPage}
+            autofillState={this.autofillState}
+          />
         );
       case 2:
         return (
-          <div className={`form-container ${details.mobileClass}`}>
-            <ContactDetails
-              details={details.contactDetails}
-              updateDetails={this.updateDetails}
-              nextPage={this.nextPage}
-              prevPage={this.prevPage}
-            />
-
-            <TransformWrapper
-              ref={this.setResizeRef}
-              initialScale={this.getScale()}
-              minScale={0.3}
-              maxScale={2}
-              centerOnInit
-            >
-              <TransformComponent wrapperClass="transform-wrapper" contentClass="transform-content">
-                <Preview details={details} />
-              </TransformComponent>
-            </TransformWrapper>
-
-            <button className="close-preview" onClick={this.updateMobileClass}>
-              Preview <BsEyeFill></BsEyeFill>
-            </button>
-          </div>
+          <ContactDetails
+            details={details.contactDetails}
+            updateDetails={this.updateDetails}
+            nextPage={this.nextPage}
+            prevPage={this.prevPage}
+          />
         );
       case 3:
         return (
-          <div className={`form-container ${details.mobileClass}`}>
-            <Education
-              details={details.education}
-              updateDetails={this.updateDetails}
-              nextPage={this.nextPage}
-              prevPage={this.prevPage}
-            />
-
-            <TransformWrapper
-              ref={this.setResizeRef}
-              initialScale={this.getScale()}
-              minScale={0.3}
-              maxScale={2}
-              centerOnInit
-            >
-              <TransformComponent wrapperClass="transform-wrapper" contentClass="transform-content">
-                <Preview details={details} />
-              </TransformComponent>
-            </TransformWrapper>
-
-            <button className="close-preview" onClick={this.updateMobileClass}>
-              Preview <BsEyeFill></BsEyeFill>
-            </button>
-          </div>
+          <Education
+            details={details.education}
+            updateDetails={this.updateDetails}
+            nextPage={this.nextPage}
+            prevPage={this.prevPage}
+          />
         );
       case 4:
         return (
-          <div className={`form-container ${details.mobileClass}`}>
-            <Experience
-              details={details.experience}
-              updateDetails={this.updateDetails}
-              nextPage={this.nextPage}
-              prevPage={this.prevPage}
-            />
-
-            <TransformWrapper
-              ref={this.setResizeRef}
-              initialScale={this.getScale()}
-              minScale={0.3}
-              maxScale={2}
-              centerOnInit
-            >
-              <TransformComponent wrapperClass="transform-wrapper" contentClass="transform-content">
-                <Preview details={details} />
-              </TransformComponent>
-            </TransformWrapper>
-
-            <button className="close-preview" onClick={this.updateMobileClass}>
-              Preview <BsEyeFill></BsEyeFill>
-            </button>
-          </div>
+          <Experience
+            details={details.experience}
+            updateDetails={this.updateDetails}
+            nextPage={this.nextPage}
+            prevPage={this.prevPage}
+          />
         );
       case 5:
         return (
-          <div className={`form-container ${details.mobileClass}`}>
-            <Skills
-              details={details.skills}
-              updateDetails={this.updateDetails}
-              nextPage={this.nextPage}
-              prevPage={this.prevPage}
-            />
-
-            <TransformWrapper
-              ref={this.setResizeRef}
-              initialScale={this.getScale()}
-              minScale={0.3}
-              maxScale={2}
-              centerOnInit
-            >
-              <TransformComponent wrapperClass="transform-wrapper" contentClass="transform-content">
-                <Preview details={details} />
-              </TransformComponent>
-            </TransformWrapper>
-
-            <button className="close-preview" onClick={this.updateMobileClass}>
-              Preview <BsEyeFill></BsEyeFill>
-            </button>
-          </div>
+          <Skills
+            details={details.skills}
+            updateDetails={this.updateDetails}
+            nextPage={this.nextPage}
+            prevPage={this.prevPage}
+          />
         );
       case 6:
         return (
-          <div className={`form-container ${details.mobileClass}`}>
-            <References
-              details={details.references}
-              updateDetails={this.updateDetails}
-              nextPage={this.nextPage}
-              prevPage={this.prevPage}
-            />
-
-            <TransformWrapper
-              ref={this.setResizeRef}
-              initialScale={this.getScale()}
-              minScale={0.3}
-              maxScale={2}
-              centerOnInit
-            >
-              <TransformComponent wrapperClass="transform-wrapper" contentClass="transform-content">
-                <Preview details={details} />
-              </TransformComponent>
-            </TransformWrapper>
-
-            <button className="close-preview" onClick={this.updateMobileClass}>
-              Preview <BsEyeFill></BsEyeFill>
-            </button>
-          </div>
+          <References
+            details={details.references}
+            updateDetails={this.updateDetails}
+            nextPage={this.nextPage}
+            prevPage={this.prevPage}
+          />
         );
       case 7:
         return (
-          <div className={`form-container ${details.mobileClass}`}>
-            <Image
-              image={details.image}
-              imagePosition={details.imagePosition}
-              imageScale={details.imageScale}
-              updateImage={this.updateImage}
-              updateImageInfo={this.updateImageInfo}
-              nextPage={this.nextPage}
-              prevPage={this.prevPage}
-            />
-
-            <TransformWrapper
-              ref={this.setResizeRef}
-              initialScale={this.getScale()}
-              minScale={0.3}
-              maxScale={2}
-              centerOnInit
-            >
-              <TransformComponent wrapperClass="transform-wrapper" contentClass="transform-content">
-                <Preview details={details} />
-              </TransformComponent>
-            </TransformWrapper>
-
-            <button className="close-preview" onClick={this.updateMobileClass}>
-              Preview <BsEyeFill></BsEyeFill>
-            </button>
-          </div>
+          <Image
+            image={details.image}
+            imagePosition={details.imagePosition}
+            imageScale={details.imageScale}
+            updateImage={this.updateImage}
+            updateValue={this.updateValue}
+            nextPage={this.nextPage}
+            prevPage={this.prevPage}
+          />
         );
       case 8:
         return (
-          <div className={`form-container ${details.mobileClass}`}>
-            <Theme
-              details={details.themeColour}
-              updateDetails={this.updateDetails}
-              updateImageInfo={this.updateImageInfo}
-              nextPage={this.nextPage}
-              prevPage={this.prevPage}
-            />
-
-            <TransformWrapper
-              ref={this.setResizeRef}
-              initialScale={this.getScale()}
-              minScale={0.3}
-              maxScale={2}
-              centerOnInit
-            >
-              <TransformComponent wrapperClass="transform-wrapper" contentClass="transform-content">
-                <Preview details={details} />
-              </TransformComponent>
-            </TransformWrapper>
-
-            <button className="close-preview" onClick={this.updateMobileClass}>
-              Preview <BsEyeFill></BsEyeFill>
-            </button>
-          </div>
+          <Theme
+            themeColour={details.themeColour}
+            updateDetails={this.updateDetails}
+            updateValue={this.updateValue}
+            nextPage={this.nextPage}
+            prevPage={this.prevPage}
+          />
         );
     }
+  };
+
+  render() {
+    const details = this.state;
+    return (
+      <div className={`form-container ${details.mobileClass}`}>
+        {this.switchPage()}
+
+        <TransformWrapper
+          ref={this.setResizeRef}
+          initialScale={this.getScale()}
+          minScale={0.3}
+          maxScale={2}
+          centerOnInit
+        >
+          <TransformComponent wrapperClass="transform-wrapper" contentClass="transform-content">
+            <Preview details={details} />
+          </TransformComponent>
+        </TransformWrapper>
+
+        <button className="close-preview" onClick={this.updateMobileClass}>
+          Preview <BsEyeFill></BsEyeFill>
+        </button>
+      </div>
+    );
   }
 }
 

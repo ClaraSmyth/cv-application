@@ -92,6 +92,8 @@ const autofill = () => {
     canvas: '',
 
     mobileClass: 'inactive',
+
+    themeColour: 'default',
   };
 };
 

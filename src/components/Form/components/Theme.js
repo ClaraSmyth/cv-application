@@ -16,7 +16,7 @@ class Theme extends Component {
 
   changeTheme = (colour) => (e) => {
     e.preventDefault();
-    this.props.updateImageInfo('themeColour', colour);
+    this.props.updateValue('themeColour', colour);
   };
 
   render() {
