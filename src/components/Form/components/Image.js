@@ -1,20 +1,7 @@
 import React, { Component } from 'react';
 import AvatarEditor from 'react-avatar-editor';
-import domtoimage from 'dom-to-image';
-import FileSaver from 'file-saver';
 
 class Image extends Component {
-  onSave = (e) => {
-    e.preventDefault();
-    domtoimage.toBlob(document.getElementById('save-node')).then(function (blob) {
-      if (window.saveAs) {
-        window.saveAs(blob, 'CV.png');
-      } else {
-        FileSaver.saveAs(blob, 'CV.png');
-      }
-    });
-  };
-
   handleZoom = (e) => {
     this.props.updateValue('imageScale', e.target.value / 50);
     this.updateImage();
