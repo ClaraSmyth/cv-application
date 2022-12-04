@@ -39,11 +39,11 @@ class Theme extends Component {
 
         <h3>Presets</h3>
         <div className="presetTheme-container">
-          <button onClick={this.changePreset('default')} style={{ backgroundColor: this.themes.default[0] }}></button>
-          <button onClick={this.changePreset('red')} style={{ backgroundColor: this.themes.red[0] }}></button>
-          <button onClick={this.changePreset('green')} style={{ backgroundColor: this.themes.green[0] }}></button>
-          <button onClick={this.changePreset('blue')} style={{ backgroundColor: this.themes.blue[0] }}></button>
-          <button onClick={this.changePreset('black')} style={{ backgroundColor: this.themes.black[0] }}></button>
+          <button onClick={this.changePreset('default')} style={{ '--clr-three': this.themes.default[0] }}></button>
+          <button onClick={this.changePreset('red')} style={{ '--clr-three': this.themes.red[0] }}></button>
+          <button onClick={this.changePreset('green')} style={{ '--clr-three': this.themes.green[0] }}></button>
+          <button onClick={this.changePreset('blue')} style={{ '--clr-three': this.themes.blue[0] }}></button>
+          <button onClick={this.changePreset('black')} style={{ '--clr-three': this.themes.black[0] }}></button>
         </div>
 
         <h3>Custom</h3>
