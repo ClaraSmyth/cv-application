@@ -88,14 +88,19 @@ class Form extends Component {
       refEmail2: '',
     },
 
+    theme: {
+      primaryColour: '#804b9b',
+      headerColour: '#c8c4ca',
+      sidebarColour: '#e0d9e3',
+      mainColour: '#e6e6e6',
+    },
+
     image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E",
     imagePosition: { x: 0.5, y: 0.5 },
     imageScale: 1,
     canvas: '',
 
     mobileClass: 'inactive',
-
-    themeClass: 'default',
   };
 
   // Updates a value in state
@@ -245,7 +250,7 @@ class Form extends Component {
       case 8:
         return (
           <Theme
-            themeClass={details.themeClass}
+            details={details.theme}
             updateDetails={this.updateDetails}
             updateValue={this.updateValue}
             nextPage={this.nextPage}
