@@ -88,8 +88,8 @@ const autofill = () => {
 
     theme: {
       primaryColour: '#804b9b',
-      headerColour: '#c8c4ca',
-      sidebarColour: '#e0d9e3',
+      headerColour: '#e0d9e3',
+      sidebarColour: '#c8c4ca',
       mainColour: '#e6e6e6',
     },
 

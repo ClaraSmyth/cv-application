@@ -25,11 +25,11 @@ class Theme extends Component {
   };
 
   themes = {
-    default: ['#804b9b', '#c8c4ca', '#e0d9e3', '#e6e6e6'],
-    red: ['#b94646', '#cac4c4', '#e4d7d7', '#e6e6e6'],
-    green: ['#5a9c4a', '#c5cac4', '#dae4d7', '#e6e6e6'],
-    blue: ['#2f88bc', '#c4c8ca', '#d7e0e4', '#e6e6e6'],
-    black: ['#000000', '#c7c7c7', '#dedede', '#e6e6e6'],
+    default: ['#804b9b', '#e0d9e3', '#c8c4ca', '#e6e6e6'],
+    red: ['#b94646', '#e4d7d7', '#cac4c4', '#e6e6e6'],
+    green: ['#5a9c4a', '#dae4d7', '#c5cac4', '#e6e6e6'],
+    blue: ['#2f88bc', '#d7e0e4', '#c4c8ca', '#e6e6e6'],
+    black: ['#000000', '#dedede', '#c7c7c7', '#e6e6e6'],
   };
 
   render() {
@@ -49,13 +49,24 @@ class Theme extends Component {
         <h3>Custom</h3>
         <div className="customTheme-container">
           <div>
-            <label htmlFor="primaryColourInput">Primary</label>
+            <label htmlFor="primaryColourInput">Accent</label>
             <input
               id="primaryColourInput"
               name="primaryColourInput"
               type="color"
               onChange={this.props.updateDetails('theme', 'primaryColour')}
               value={this.props.details['primaryColour']}
+            />
+          </div>
+
+          <div>
+            <label htmlFor="mainColourInput">Body</label>
+            <input
+              id="mainColourInput"
+              name="mainColourInput"
+              type="color"
+              onChange={this.props.updateDetails('theme', 'mainColour')}
+              value={this.props.details['mainColour']}
             />
           </div>
 
@@ -78,17 +89,6 @@ class Theme extends Component {
               type="color"
               onChange={this.props.updateDetails('theme', 'sidebarColour')}
               value={this.props.details['sidebarColour']}
-            />
-          </div>
-
-          <div>
-            <label htmlFor="mainColourInput">Main Section</label>
-            <input
-              id="mainColourInput"
-              name="mainColourInput"
-              type="color"
-              onChange={this.props.updateDetails('theme', 'mainColour')}
-              value={this.props.details['mainColour']}
             />
           </div>
         </div>
