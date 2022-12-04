@@ -32,9 +32,19 @@ class Preview extends Component {
   };
 
   render() {
-    const { userDetails, contactDetails, education, experience, skills, references, canvas } = this.props.details;
+    const { userDetails, contactDetails, education, experience, skills, references, canvas, theme } =
+      this.props.details;
     return (
-      <div id="save-node" className={'preview-container'}>
+      <div
+        id="save-node"
+        className={'preview-container'}
+        style={{
+          '--clr-three': theme.primaryColour,
+          '--bg-clr-one': theme.headerColour,
+          '--bg-clr-two': theme.sidebarColour,
+          '--bg-clr-three': theme.mainColour,
+        }}
+      >
         <div className="preview-sidebar">
           {this.addImage(canvas)}
 
