@@ -40,8 +40,8 @@ class Preview extends Component {
         className={'preview-container'}
         style={{
           '--clr-three': theme.primaryColour,
-          '--bg-clr-one': theme.headerColour,
-          '--bg-clr-two': theme.sidebarColour,
+          '--bg-clr-one': theme.sidebarColour,
+          '--bg-clr-two': theme.headerColour,
           '--bg-clr-three': theme.mainColour,
         }}
       >
