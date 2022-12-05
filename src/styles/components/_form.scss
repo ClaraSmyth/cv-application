@@ -48,6 +48,8 @@
     width: 100%;
     resize: none;
     text-align: center;
+    overflow-y: auto;
+    overflow-y: overlay;
 
     &:focus-visible {
       outline: none;
@@ -55,6 +57,24 @@
       background-image: linear-gradient(var(--clr-one), var(--clr-one)), var(--grd-primary);
       background-origin: border-box;
       background-clip: padding-box, border-box;
+    }
+
+    // Custom Scrollbar (Works on Chrome, Edge and Safari)
+
+    &::-webkit-scrollbar {
+      width: 0.6rem;
+    }
+
+    &::-webkit-scrollbar-track {
+      margin: 0.5rem 0rem;
+      border-radius: 100vmax;
+      background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 100vmax;
+      border: 0.125rem solid var(--clr-one);
+      background-color: #c297ec;
     }
   }
 
