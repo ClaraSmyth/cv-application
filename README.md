@@ -25,6 +25,7 @@ To see the assignment details - [Click Here](https://www.theodinproject.com/less
 
 #### Other tools used
 
+- ESLint <img src="./readme-assets/eslint.svg">
 - Prettier <img src="./readme-assets/prettier.svg">
 
 ## Credits
