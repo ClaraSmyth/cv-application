@@ -6,6 +6,7 @@
   width: 62.5rem;
   overflow: hidden;
   font-size: var(--fs-450);
+  color: var(--fc-primary);
 }
 
 .preview-sidebar {
@@ -135,7 +136,7 @@
 
   & svg {
     position: relative;
-    color: white;
+    color: var(--clr-one);
     width: 1.4rem;
     height: 1.4rem;
     margin: 0.5rem;
@@ -155,9 +156,9 @@
 .image-placeholder {
   width: 100%;
   aspect-ratio: 1;
-  background-color: white;
+  background-color: var(--clr-one);
   border-radius: 100vmax;
   border: 2.5rem solid var(--bg-clr-one);
-  outline: 0.75rem double white;
+  outline: 0.75rem double var(--clr-one);
   outline-offset: -2.6rem;
 }
