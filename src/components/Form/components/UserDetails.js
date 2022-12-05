@@ -15,6 +15,7 @@ export class UserDetails extends Component {
           type="text"
           onChange={updateDetails('userDetails', 'firstName')}
           defaultValue={details.firstName}
+          value={details.firstName}
         />
 
         <label htmlFor="lastNameInput">Last Name</label>
@@ -24,6 +25,7 @@ export class UserDetails extends Component {
           type="text"
           onChange={updateDetails('userDetails', 'lastName')}
           defaultValue={details.lastName}
+          value={details.lastName}
         />
 
         <label htmlFor="titleInput">Job Title</label>
@@ -33,6 +35,7 @@ export class UserDetails extends Component {
           type="text"
           onChange={updateDetails('userDetails', 'jobTitle')}
           defaultValue={details.jobTitle}
+          value={details.jobTitle}
         />
 
         <label htmlFor="infoInput">Intro</label>
@@ -42,6 +45,7 @@ export class UserDetails extends Component {
           type="text"
           onChange={updateDetails('userDetails', 'intro')}
           defaultValue={details.intro}
+          value={details.intro}
         />
 
         <div className="form-nav">
