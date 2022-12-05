@@ -39,6 +39,8 @@ class Preview extends Component {
         id="save-node"
         className={'preview-container'}
         style={{
+          '--fc-primary': theme.fontColour,
+          '--clr-one': theme.baseColour,
           '--clr-three': theme.primaryColour,
           '--bg-clr-one': theme.sidebarColour,
           '--bg-clr-two': theme.headerColour,

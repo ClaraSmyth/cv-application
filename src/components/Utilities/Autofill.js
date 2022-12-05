@@ -91,6 +91,8 @@ const autofill = () => {
       headerColour: '#e0d9e3',
       sidebarColour: '#c8c4ca',
       mainColour: '#e6e6e6',
+      baseColour: '#FFFFFF',
+      fontColour: '#000000',
     },
 
     image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E",

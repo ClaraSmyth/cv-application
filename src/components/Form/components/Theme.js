@@ -21,15 +21,17 @@ class Theme extends Component {
       headerColour: this.themes[theme][1],
       sidebarColour: this.themes[theme][2],
       mainColour: this.themes[theme][3],
+      baseColour: this.themes[theme][4],
+      fontColour: this.themes[theme][5],
     });
   };
 
   themes = {
-    default: ['#804b9b', '#e0d9e3', '#c8c4ca', '#e6e6e6'],
-    red: ['#b94646', '#e4d7d7', '#cac4c4', '#e6e6e6'],
-    green: ['#5a9c4a', '#dae4d7', '#c5cac4', '#e6e6e6'],
-    blue: ['#2f88bc', '#d7e0e4', '#c4c8ca', '#e6e6e6'],
-    black: ['#000000', '#dedede', '#c7c7c7', '#e6e6e6'],
+    default: ['#804b9b', '#e0d9e3', '#c8c4ca', '#e6e6e6', '#FFFFFF', '#000000'],
+    red: ['#b94646', '#e4d7d7', '#cac4c4', '#e6e6e6', '#FFFFFF', '#000000'],
+    green: ['#5a9c4a', '#dae4d7', '#c5cac4', '#e6e6e6', '#FFFFFF', '#000000'],
+    blue: ['#2f88bc', '#d7e0e4', '#c4c8ca', '#e6e6e6', '#FFFFFF', '#000000'],
+    black: ['#000000', '#dedede', '#c7c7c7', '#e6e6e6', '#FFFFFF', '#000000'],
   };
 
   render() {
@@ -56,6 +58,28 @@ class Theme extends Component {
               type="color"
               onChange={this.props.updateDetails('theme', 'primaryColour')}
               value={this.props.details['primaryColour']}
+            />
+          </div>
+
+          <div>
+            <label htmlFor="baseColourInput">Base</label>
+            <input
+              id="baseColourInput"
+              name="baseColourInput"
+              type="color"
+              onChange={this.props.updateDetails('theme', 'baseColour')}
+              value={this.props.details['baseColour']}
+            />
+          </div>
+
+          <div>
+            <label htmlFor="fontColourInput">Font</label>
+            <input
+              id="fontColourInput"
+              name="fontColourInput"
+              type="color"
+              onChange={this.props.updateDetails('theme', 'fontColour')}
+              value={this.props.details['fontColour']}
             />
           </div>
 
