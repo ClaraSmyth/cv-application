@@ -94,11 +94,15 @@
 
 .form-nav {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 100%;
+  padding: 0rem 1rem;
 
   button {
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.1rem;
     padding: 0.2rem 0.8rem;
     border: 0.1875rem solid var(--clr-two);
     border-radius: 100vmax;
@@ -239,12 +243,6 @@
   width: 1px;
 }
 
-.image-btns {
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
-}
-
 .image-confirm {
   cursor: pointer;
   padding: 0.2rem 0.8rem;
@@ -252,6 +250,15 @@
   border-radius: 100vmax;
   background-color: var(--clr-two);
   font-weight: bold;
+
+  &:hover,
+  &:focus-visible {
+    outline: none;
+    border: 0.1875rem solid transparent;
+    background-image: linear-gradient(var(--clr-two), var(--clr-two)), var(--grd-primary);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+  }
 }
 
 .image-editor {
@@ -274,12 +281,6 @@
     border: none;
     outline: none;
     font-size: var(--fs-400);
-
-    &:hover,
-    &:focus-visible {
-      border: none;
-      background: var(--clr-two);
-    }
 
     &::-webkit-slider-thumb {
       -webkit-appearance: none;
