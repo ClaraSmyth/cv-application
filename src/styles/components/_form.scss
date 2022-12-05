@@ -95,13 +95,18 @@
   margin-bottom: 0.5rem;
 
   button {
-    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
     aspect-ratio: 1;
-    line-height: 0;
-    padding: 0.6rem;
+    line-height: 1;
     border: 0.1875rem solid var(--clr-two);
     border-radius: 100vmax;
     background-color: var(--clr-one);
+    font-family: 'Roboto', sans-serif;
+    padding-top: 0.2rem;
+    cursor: pointer;
 
     &.active {
       border: 0.1875rem solid transparent;
