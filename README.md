@@ -1,9 +1,8 @@
 <div  align=center>
 	<h1>CV Application
 	<br>
-		<img src="https://img.shields.io/static/v1?label=&message=HTML&color=E34F26&style=for-the-badge&logo=HTML5&logoColor=white&logoWidth=&labelColor=&link=">
+		<img src="https://img.shields.io/static/v1?label=&message=REact&color=61DAFB&style=for-the-badge&logo=REact&logoColor=black&logoWidth=&labelColor=&link=">
 		<img src="https://img.shields.io/static/v1?label=&message=SASS&color=CC6699&style=for-the-badge&logo=sass&logoColor=FFF&logoWidth=&labelColor=&link=">
-        <img src="https://img.shields.io/static/v1?label=&message=REact&color=61DAFB&style=for-the-badge&logo=REact&logoColor=black&logoWidth=&labelColor=&link=">
 		<br>
 	</h1>
 	<h3><b><a href="https://clarasmyth.github.io/cv-application/">View Live Demo</a></b></h3>
@@ -21,9 +20,8 @@ To see the assignment details - [Click Here](https://www.theodinproject.com/less
 
 ## Built Using
 
-- HTML5 <img src="./readme-assets/html5.svg">
-- SASS <img src="./readme-assets/sass.svg">
 - React <img src="./readme-assets/react.svg">
+- SASS <img src="./readme-assets/sass.svg">
 
 #### Other tools used
 
