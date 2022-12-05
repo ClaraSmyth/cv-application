@@ -59,9 +59,9 @@ class Image extends Component {
           type="file"
           onChange={this.props.updateImage}
         />
-        <label className="image-confirm" htmlFor="imageInput">
+        <button className="image-confirm" htmlFor="imageInput">
           Upload
-        </label>
+        </button>
 
         <div className="form-nav">
           <button onClick={this.props.prevPage}>Prev</button>
