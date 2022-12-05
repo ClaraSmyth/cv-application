@@ -1,5 +1,5 @@
 <div  align=center>
-	<h1>Battleship Game
+	<h1>CV Application
 	<br>
 		<img src="https://img.shields.io/static/v1?label=&message=HTML&color=E34F26&style=for-the-badge&logo=HTML5&logoColor=white&logoWidth=&labelColor=&link=">
 		<img src="https://img.shields.io/static/v1?label=&message=SASS&color=CC6699&style=for-the-badge&logo=sass&logoColor=FFF&logoWidth=&labelColor=&link=">
@@ -15,33 +15,38 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-This project is a battleship game created as part of [TheOdinProject](https://www.theodinproject.com) curriculum.
+This project is a CV builder application created as part of [TheOdinProject](https://www.theodinproject.com) curriculum.
 
 To see the assignment details - [Click Here](https://www.theodinproject.com/lessons/node-path-javascript-cv-application)
 
 ## Built Using
 
--   HTML5 <img src="./readme-assets/html5.svg">
--   SASS <img src="./readme-assets/sass.svg">
--   React <img src="./readme-assets/react.svg">
+- HTML5 <img src="./readme-assets/html5.svg">
+- SASS <img src="./readme-assets/sass.svg">
+- React <img src="./readme-assets/react.svg">
 
 #### Other tools used
 
--   ESLint <img src="./readme-assets/eslint.svg">
--   Prettier <img src="./readme-assets/prettier.svg">
--   Babel <img src="./readme-assets/babel.svg">
--   Jest <img src="./readme-assets/jest.svg">
+- Prettier <img src="./readme-assets/prettier.svg">
 
 ## Credits
 
+#### Packages/Libraries
+
+- [React Zoom Pan Pinch](https://github.com/proNestorAps/react-zoom-pan-pinch)
+- [React Avatar Editor](https://github.com/mosch/react-avatar-editor)
+- [Dom To Image](https://github.com/tsayen/dom-to-image)
+- [File Saver](https://github.com/eligrey/FileSaver.js)
+- [Faker JS](https://github.com/faker-js/faker)
+
 #### Icons
 
--   [Simple Icons](https://simpleicons.org/)
--   [Google Material Icons](https://fonts.google.com/icons)
+- [React Icons](https://github.com/react-icons/react-icons)
+- [Bootstrap Icons](https://github.com/twbs/icons)
 
 #### Favicon
 
--   [favicon.io](https://favicon.io/)
+- [favicon.io](https://favicon.io/)
 
 ## Gallery
 
