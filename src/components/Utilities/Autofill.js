@@ -18,7 +18,7 @@ const autofill = () => {
       firstName: firstName,
       lastName: lastName,
       jobTitle: 'Full Stack Web Developer',
-      intro: faker.lorem.paragraph(3),
+      intro: faker.lorem.paragraph(2),
     },
 
     contactDetails: {
