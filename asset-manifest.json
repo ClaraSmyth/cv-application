@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/cv-application/static/css/main.3cfe5a7c.css",
+    "main.css": "/cv-application/static/css/main.69e99c66.css",
     "main.js": "/cv-application/static/js/main.0b071d6e.js",
     "static/media/blurry-gradient-haikei.svg": "/cv-application/static/media/blurry-gradient-haikei.5fa32843fac34c49ce6e.svg",
     "index.html": "/cv-application/index.html",
-    "main.3cfe5a7c.css.map": "/cv-application/static/css/main.3cfe5a7c.css.map",
+    "main.69e99c66.css.map": "/cv-application/static/css/main.69e99c66.css.map",
     "main.0b071d6e.js.map": "/cv-application/static/js/main.0b071d6e.js.map"
   },
   "entrypoints": [
-    "static/css/main.3cfe5a7c.css",
+    "static/css/main.69e99c66.css",
     "static/js/main.0b071d6e.js"
   ]
 }
