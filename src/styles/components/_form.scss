@@ -20,7 +20,7 @@
   box-shadow: var(--shadow-light);
 
   label {
-    font-weight: bold;
+    font-weight: 600;
   }
 
   input {
@@ -132,6 +132,7 @@
     border: 0.1875rem solid var(--clr-two);
     border-radius: 100vmax;
     background-color: var(--clr-two);
+    font-weight: 600;
 
     &:hover,
     &:focus-visible {
