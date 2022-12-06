@@ -12,8 +12,6 @@
 
 ## Description
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
 This project is a CV builder application created as part of [TheOdinProject](https://www.theodinproject.com) curriculum.
 
 To see the assignment details - [Click Here](https://www.theodinproject.com/lessons/node-path-javascript-cv-application)
