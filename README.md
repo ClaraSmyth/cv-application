@@ -40,6 +40,7 @@ To see the assignment details - [Click Here](https://www.theodinproject.com/less
 
 - [React Icons](https://github.com/react-icons/react-icons)
 - [Bootstrap Icons](https://github.com/twbs/icons)
+- [Simple Icons](https://simpleicons.org/)
 
 #### Favicon
 
